@@ -85,12 +85,6 @@ a:hover {
   text-decoration: none;
 }
 
-a:hover:after {
-  width: 100%;
-  left: 0;
-  background-color: #AA61BD;
-}
-
 h1,
 h2,
 h3,
