@@ -23,6 +23,7 @@
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #7a6960; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #AA61BD; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-hover-colour: #77178f; /* Accent hover color for buttons and links */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -195,7 +196,7 @@ h6 {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: #ffffff; /* White text */
-  background: var(--heading-color);
+  background: var(--accent-color);
   font-size: 14px;
   padding: 8px 45px;
   margin: 0 0 0 30px;
@@ -206,7 +207,7 @@ h6 {
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: #ffffff; /* White text */
-  background: #AA61BD;
+  background: var(--accent-hover-colour);
 }
 
 @media (max-width: 1200px) {
@@ -1111,6 +1112,13 @@ section,
   color: var(--accent-color);
 }
 
+@media (max-width: 991px) {
+  .services {
+    margin: 0px 10px;
+    padding: 40px 20px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
@@ -1667,8 +1675,8 @@ section,
 
 .dataset-diagram {
   position: relative;
-  width: 70%;
-  max-width: 400px;
+  width: 60%;
+  max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
@@ -1676,16 +1684,26 @@ section,
   background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
-  left: 15%;
+  left: 25%;
 }
-
 .dataset-diagram:hover {
   transform: translateY(-5px);
 }
 
 .dataset-diagram p {
-  line-height: 1.2;
+  line-height: 1;
+  font-size: 13px;
   margin-bottom: 5px;
+}
+
+@media (max-width: 991px) {
+  .dataset-diagram {
+    left: 20%;
+  }
+}
+
+.performance-metrics {
+  text-align: left !important;
 }
 
 .performance-metrics ul {
@@ -1697,6 +1715,7 @@ section,
   margin-bottom: 10px !important;
   display: list-item !important;
   margin-top: 0px !important;
+  text-align: left !important;
 }
 
 .performance-metrics li p {
@@ -1704,17 +1723,387 @@ section,
   line-height: 1.4 !important;
 }
 
+.performance-metrics h2,
+.performance-metrics .about-content h2 {
+  text-align: left !important;
+}
+
+.performance-metrics-heading {
+  text-align: left !important;
+}
+
 /* Override any conflicting styles */
 .performance-metrics ul li::before {
   display: none !important;
 }
+
+@media (max-width: 900px) {
+  .performance-metrics .about-content {
+    display: block;
+    text-align: left !important;
+  }
+
+  .performance-metrics .about-content h2 {
+    text-align: left !important;
+  }
+
+  .performance-metrics h2 {
+    text-align: left !important;
+  }
+
+  .performance-metrics .about-content ul {
+    padding-left: 20px !important;
+  }
+
+  .performance-metrics .about-content li {
+    text-align: left !important;
+  }
+
+  .performance-metrics .about-content p {
+    text-align: left !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Experimental Settings and Implementation Section
+--------------------------------------------------------------*/
+.btn-repo,
+.btn-repo:focus {
+  color: #ffffff;
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 45px;
+  border-radius: 50px;
+  transition: 0.3s;
+  margin-bottom: 20px;
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  max-width: 100%;
+}
+
+.btn-repo:hover,
+.btn-repo:focus:hover {
+  color: #ffffff;
+  background: var(--accent-hover-colour);
+}
+
+@media (max-width: 767px) {
+  .btn-repo {
+    padding: 8px 20px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+#experimental-settings-implementation .row {
+  margin-bottom: 15px;
+}
+
+.specs-table {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.specs-table th, .specs-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.specs-table th {
+  color: var(--heading-color);
+  font-weight: bold;
+  font-size: 13px;
+  background-color: #f8f8f8;
+}
+
+.specs-table tr {
+  color: var(--heading-color);
+  font-size: 13px;
+}
+
+.specs-table tr:last-child td {
+  border-bottom: none;
+}
+
+.specs-table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.specs-table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.specs-table:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 600px) {
+  .specs-table {
+      font-size: 14px;
+  }
+  
+  .specs-table th, .specs-table td {
+      padding: 8px 10px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Algorithm Comparisons Section
+--------------------------------------------------------------*/
+#algorithm-comparisons .row {
+  align-items: flex-start;
+}
+
+#algorithm-comparisons h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#algorithm-comparisons p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.algo-cards-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.algo-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center cards horizontally */
+  width: 100%;
+  max-width: 800px;
+}
+
+.algo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-height: 200px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  margin-bottom: 15px;
+  width: 100%; /* Full width on mobile */
+  max-width: 300px;
+}
+
+.algo-card p {
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 0px;
+  padding-top: 20px;
+}
+
+.algo-card:hover {
+  transform: translateY(-5px);
+}
+
+.btn-repo {
+  align-self: center;
+  padding: 8px 45px;
+  font-size: 14px;
+}
+
+@media (min-width: 901px) {
+  .algo-cards {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .algo-card {
+    flex: 0 1 calc(50% - 10px);
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .algo-card {
+    padding: 20px;
+    margin-bottom: 10px;
+    min-height: 0px;
+  }
+
+  .algo-card p {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .btn-repo {
+    padding: 8px 45px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 575px) {
+  .algo-card {
+    padding: 20px;
+  }
+
+  .algo-card p {
+    font-size: 13px;
+  }
+
+  .btn-repo {
+    padding: 8px 45px;
+    font-size: 13px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Resources Section
+--------------------------------------------------------------*/
+.resource-title {
+  padding-bottom: 10px;
+}
+
+.resource-title h2 {
+  margin-bottom: 5px;
+}
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.resource-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.resource-item:last-child {
+  border-bottom: none;
+}
+
+.resource-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: var(--heading-color);
+}
+
+/* New class for the container of author and button */
+.resource-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust the spacing between the name and the button */
+}
+
+.author-name {
+  font-size: 16px;
+  color: var(--heading-color);
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.btn-view {
+  padding: 8px 45px;
+  background-color: var(--heading-color);
+  color: var(--contrast-color);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-view:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .resource-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+  }
+
+  .btn-view {
+      align-self: flex-start;
+  }
+
+  .resource-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .author-name {
+      text-align: left;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer Section
+--------------------------------------------------------------*/
+/* Updated for proper alignment */
+.right-aligned {
+  text-align: right;
+}
+
+.container.footer-top {
+  display: flex; /* Change grid to flexbox */
+  justify-content: space-between; /* Ensure even spacing between columns */
+  width: 100%; /* Ensure full width */
+  align-items: flex-start; /* Align columns to start */
+}
+
+.footer-about {
+  width: 45%; /* Ensure each column takes up around half of the width */
+}
+
+.right-aligned .footer-contact {
+  margin-left: auto; /* Push the right-aligned content to the far right */
+}
+
+.right-aligned .d-flex {
+  justify-content: flex-end; /* Align the university name to the right */
+}
+
+@media (max-width: 768px) {
+  .container.footer-top {
+    flex-direction: column; /* Stack columns on smaller screens */
+    align-items: flex-start;
+  }
+
+  .footer-about {
+    width: 100%; /* Make sure columns take full width on small screens */
+    margin-bottom: 20px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Blob Section
 --------------------------------------------------------------*/
 .blob {
   margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
@@ -1730,6 +2119,13 @@ section,
 --------------------------------------------------------------*/
 .no-bottom-margin {
   margin-bottom: 0px !important;
+}
+
+/*--------------------------------------------------------------
+# Normal Text Colour Section
+--------------------------------------------------------------*/
+.normal-text {
+  color: var(--heading-color)
 }
 
 /*--------------------------------------------------------------
