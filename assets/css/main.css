@@ -52,6 +52,18 @@
   --surface-color: #ffffff;
 }
 
+.glass-background {
+  background: linear-gradient(to bottom right, 
+    rgba(144, 238, 144, 0.1), /* Light green with low opacity */
+    rgba(255, 255, 255, 0.5), /* White with medium opacity */
+    rgba(255, 243, 106, 0.1)  /* Light blue with low opacity */
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  --surface-color: #ffffff;
+}
+
 .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
@@ -83,6 +95,10 @@ a {
 a:hover {
   color: #AA61BD;
   text-decoration: none;
+}
+
+p {
+  color: var(--heading-color)
 }
 
 h1,
@@ -914,6 +930,13 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #7a6960;
+}
+
 .about .about-content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -973,13 +996,11 @@ section,
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #7a6960;
 }
 
 #vrp p {
   font-size: 16px;
   line-height: 1.6;
-  color: #4e4039;
 }
 
 .vrp-diagrams {
@@ -993,8 +1014,8 @@ section,
   position: absolute;
   width: 45%;
   max-width: 260px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   transition: transform 0.3s ease-in-out;
   padding: 15px 40px;
   background-color: white;
@@ -1042,6 +1063,11 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+.services {
+  margin: 0px 120px;
+  padding: 40px 30px;
+}
+
 .services .service-item {
   box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
   background-color: var(--surface-color);
@@ -1630,6 +1656,80 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Dataset Section
+--------------------------------------------------------------*/
+#dataset-performance-metrics .row {
+  align-items: flex-start;
+}
+
+.dataset-diagram {
+  position: relative;
+  width: 70%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  padding: 15px 40px;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  left: 15%;
+}
+
+.dataset-diagram:hover {
+  transform: translateY(-5px);
+}
+
+.dataset-diagram p {
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.performance-metrics ul {
+  list-style-type: disc !important;
+  padding-left: 20px !important;
+}
+
+.performance-metrics li {
+  margin-bottom: 10px !important;
+  display: list-item !important;
+  margin-top: 0px !important;
+}
+
+.performance-metrics li p {
+  margin-bottom: 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* Override any conflicting styles */
+.performance-metrics ul li::before {
+  display: none !important;
+}
+
+/*--------------------------------------------------------------
+# Blob Section
+--------------------------------------------------------------*/
+.blob {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/*--------------------------------------------------------------
+# No Bottom Padding Section
+--------------------------------------------------------------*/
+.no-bottom-padding {
+  padding-bottom: 0px !important;
+}
+
+/*--------------------------------------------------------------
+# No Bottom Margin Section
+--------------------------------------------------------------*/
+.no-bottom-margin {
+  margin-bottom: 0px !important;
 }
 
 /*--------------------------------------------------------------

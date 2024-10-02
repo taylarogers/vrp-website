@@ -94,6 +94,7 @@
    */
   function aosInit() {
     AOS.init({
+      startEvent: 'DOMContentLoaded',
       duration: 600,
       easing: 'ease-in-out',
       once: true,
