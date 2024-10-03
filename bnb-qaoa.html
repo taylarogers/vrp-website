@@ -202,7 +202,59 @@
         </div>
     </section><!-- Algorithmic Implementation Section -->
 
-    
+    <!-- Route Constructions Section -->
+<section id="algorithms" class="section about research-questions-section">
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="research-questions-title">
+                    <h2>Route Constructions</h2>
+                    <p class="subtitle">Routes constructed by each algorithm on each individual problem size</p>
+                    <div class="dropdown mt-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            2 customers, 1 vehicle
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#" data-problem-size="2c1v">2 customers, 1 vehicle</a></li>
+                            <li><a class="dropdown-item" href="#" data-problem-size="3c1v">3 customers, 1 vehicle</a></li>
+                            <li><a class="dropdown-item" href="#" data-problem-size="4c1v">4 customers, 1 vehicle</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="research-questions-content">
+                    <div id="algorithm-content" class="algorithm-grid">
+                        <div class="algorithm-section" id="bb-section">
+                            <h3 class="smaller-heading">B&B</h3>
+                            <div class="route-diagram-container">
+                                <div class="blob glass-background route-diagram">
+                                    <img src="assets/img/BB-diagram-2c1v.svg" alt="B&B Tree for 2 customers, 1 vehicle" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="algorithm-section" id="qaoa-coblya-section">
+                            <h3 class="smaller-heading">QAOA with COBLYA</h3>
+                            <div class="route-diagram-container">
+                                <div class="blob glass-background route-diagram">
+                                    <img src="assets/img/QAOA-COBLYA-diagram-2c1v.svg" alt="QAOA with COBLYA for 2 customers, 1 vehicle" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="algorithm-section" id="qaoa-spsa-section">
+                            <h3 class="smaller-heading">QAOA with SPSA</h3>
+                            <div class="route-diagram-container">
+                                <div class="blob glass-background route-diagram">
+                                    <img src="assets/img/QAOA-SPSA-diagram-2c1v.svg" alt="QAOA with SPSA for 2 customers, 1 vehicle" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Route Constructions Section -->
 
     <!-- Quantum Section -->
     <section id="quantum" class="section services glass-background blob">
@@ -487,7 +539,7 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
+    <script>
     document.addEventListener('DOMContentLoaded', function() {
       var homeLink = document.querySelector('.navmenu .dropdown > a[href="bnb-qaoa.html"]');
       if (homeLink) {
@@ -498,6 +550,61 @@
         });
       }
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    const dropdownButton = document.getElementById('dropdownMenuButton');
+    const algorithmSections = document.querySelectorAll('.algorithm-section');
+
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const problemSize = this.getAttribute('data-problem-size');
+            updateImages(problemSize);
+            dropdownButton.textContent = this.textContent;
+        });
+    });
+
+    function updateImages(problemSize) {
+        algorithmSections.forEach(section => {
+            const img = section.querySelector('img');
+            const algorithm = getAlgorithmName(section.id);
+            img.src = `assets/img/${algorithm}-diagram-${problemSize}.svg`;
+            img.alt = `${algorithm} for ${getProblemSizeText(problemSize)}`;
+            console.log(`Loading image: ${img.src}`); // For debugging
+        });
+    }
+
+    function getAlgorithmName(sectionId) {
+        switch(sectionId) {
+            case 'bb-section':
+                return 'BB';
+            case 'qaoa-coblya-section':
+                return 'QAOA-COBLYA';
+            case 'qaoa-spsa-section':
+                return 'QAOA-SPSA';
+            default:
+                console.error('Unknown algorithm section:', sectionId);
+                return '';
+        }
+    }
+
+    function getProblemSizeText(problemSize) {
+        switch(problemSize) {
+            case '2c1v':
+                return '2 customers, 1 vehicle';
+            case '3c1v':
+                return '3 customers, 1 vehicle';
+            case '4c1v':
+                return '4 customers, 1 vehicle';
+            default:
+                return '';
+        }
+    }
+
+    // Set default problem size
+    updateImages('2c1v');
+});
     </script>
 
 </body>
