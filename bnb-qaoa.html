@@ -203,13 +203,14 @@
     </section><!-- Algorithmic Implementation Section -->
 
     <!-- Route Constructions Section -->
-<section id="algorithms" class="section about research-questions-section">
+<section id="route-constructions" class="section about research-questions-section">
     <div class="container">
         <div class="row align-items-start">
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="research-questions-title">
                     <h2>Route Constructions</h2>
                     <p class="subtitle">Routes constructed by each algorithm on each individual problem size</p>
+                    <p class="subtitle">Different colours show different vehicle routes, with a grey dashed line showing unused connections between customers</p>
                     <div class="dropdown mt-3">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                             2 customers, 1 vehicle
@@ -337,6 +338,71 @@
         </div>
     </div>
 </section><!-- End Route Constructions Section -->
+
+    <!-- Results Section -->
+    <section id="results" class="section about research-questions-section">
+        <div class="container">
+        <div class="row align-items-start">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="research-questions-title">
+                <h2>Results</h2>
+                <p class="subtitle">Brief discussion on the experimental results obtained by each algorithm on the proposed performance metrics</p>
+            </div>
+            </div>
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="research-questions-content">
+                    <h3 class="smaller-heading">Solution Quality</h3>
+                    <p>Due to its deterministic nature, B&B produced globally optimal results across all the problem sizes that it was able to solve.</p>
+                    <p>Both QAOA variants performed well on smaller problem sizes, but as problem size increased their solution quality decreased. The SPSA optimiser generally offered routes closer to the optimal cost, however not significantly better than COBLYA. Neither optimiser allowed QAOA to be as effective as B&B. Both optimisers also produced an invalid solution in one problem size, choosing a solution with a lower optimal cost that did not follow the constraints of the problem. These invalid solutions can be seen on the above graph, where the QAOA algorithms obtained an optimal cost below that of B&B.</p>
+                    <div class="bb-diagram-container">
+                        <div class="blob glass-background bb-diagram">
+                            <img src="assets/img/BB-diagram.svg" alt="Example Branch and Bound Tree" class="img-fluid">
+                        </div>
+                    </div>
+                    <h3 class="smaller-heading slight-upper-padding">CPU Time</h3>
+                    <p>Considering the instances that were able to be solved, B&B maintained low computational time against most problem sizes. Negligible CPU time was observed for smaller instances, with a steady upward trend in times as problem size increased. B&B also showed consistent performance across most problem sizes, with its standard deviation only noticeably increasing as the problem size approached 10 customers.</p>
+                    <p>QAOA produced significantly higher CPU times with the SPSA optimiser showing the sharpest increase in times. Even for smaller instances, SPSA required twice the amount of time than COBLYA. However, even COBLYA falls short of B&B’s performance. Both QAOA variants also showed a much higher variability in time compared to B&B. Despite the relatively higher standard deviation, it still remains small in comparison to the algorithm’s total computation time and do not noticeably affect the algorithm’s performance.</p>
+                    <div class="bb-diagram-container">
+                        <div class="blob glass-background bb-diagram">
+                            <img src="assets/img/QAOA-diagram.svg" alt="Example Branch and Bound Tree" class="img-fluid">
+                        </div>
+                    </div>
+                    <h3 class="smaller-heading slight-upper-padding">Scalability</h3>
+                    <p>From a dataset scaling up to 15 customers and 8 vehicles, B&B was able to solve up to a problem size of 15 customers and 1 vehicle given the available time and resource requirements. Its primary failure was it hitting 32GB memory limits on instances only involving 15 customers, highlighting its main weakness in its ability to solve real-world instances.</p>
+                    <p>Both QAOA variants were only able to solve up to 4 customers and 3 vehicles, with it also being affected by memory limits. Above 6 customers, the algorithm reaches qubit limits. This limit is likely due to the many constraints necessary in the problem definition. This shows QAOA’s main limitation in its ability to solve combinatorial optimisation problems.</p>
+                    <h3 class="smaller-heading slight-upper-padding">Feasibility</h3>
+                    <p>In the solvable instances, B&B consistently produced valid answers that follow all problem constraints. Both QAOA variants only produced feasible answers on 83.33% of instances, with both algorithms producing an invalid solution on one problem instance. These results occurred on a different problem size for each algorithm, implying different sensitivities to problem complexity between the optimisers. With its direct relationship, an increase in the algorithm’s p-value should raise this feasibility percentage, however it will also increase the computational time necessary.</p>
+                    <h3 class="smaller-heading slight-upper-padding">Success Rate</h3>
+                    <p>The SPSA optimiser allowed QAOA a higher success rate on both 95% and 99% thresholds. However, it was still not able to match the accuracy of B&B. On the 99% thresholds, both optimisers produced lower success rates, highlighting the challenges faced by QAOA in obtaining highly accurate solutions. </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section><!-- Results Section -->
+
+    <!-- Conclusions Section -->
+    <section id="results" class="section about research-questions-section">
+        <div class="container">
+        <div class="row align-items-start">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="research-questions-title">
+                <h2>Conclusions</h2>
+                <p class="subtitle">Answers to the research questions that the insights of the study provided</p>
+            </div>
+            </div>
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="research-questions-content">
+                    <h3 class="smaller-heading">1. How does the Quantum Approximate Optimisation Algorithm (QAOA) perform compared to Branch and Bound (B&B) regarding solution quality, computational time, scalability, feasibility and success rate across various VRP problem sizes?</h3>
+                    <p>B&B outperforms QAOA in solution quality, computational efficiency, scalability, feasibility, and success rate, especially as problem size increases. Competitiveness has been shown by QAOA on smaller problems, but a significant decline in performance has been observed with increased complexity. This indicates that further development is needed for QAOA to match classical methods in solving the VRP.</p>
+                    <h3 class="smaller-heading">2. Can enhancements in QAOA’s optimiser (e.g.,COBYLA vs. SPSA) lead to performance improvements?</h3>
+                    <p>Noticeable differences between the optimisers only emerge for instances larger than 3 customers and 2 vehicles. SPSA generally yielded solutions closer to the optimal cost, while COBYLA demonstrated lower computational times. However, neither optimiser matched B&B’s performance as problem size grew. This suggests that optimiser choice alone has is not enough to bridge the gap with classical methods.</p>
+                    <h3 class="smaller-heading">3. What are the limitations of QAOA in solving VRP instances compared to B&B?</h3>
+                    <p>QAOA’s main limitations, compared to B&B, are highlighted by its lower feasibility percentage and reduced scalability. Current quantum limitations, such as qubit count, circuit depth, and noise levels, have forced constraints on QAOA, restricting its ability to solve larger problems effectively. A significant increase in computational time has also been observed with problem size, making QAOA less practical for larger, more complex VRP instances.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section><!-- Conclusions Section -->
 
   </main>
 
