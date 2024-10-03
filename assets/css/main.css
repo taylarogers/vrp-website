@@ -2215,8 +2215,8 @@ section,
 }
 
 .route-diagram {
-  max-width: 320px;
-  padding: 15px;
+  max-width: 350px;
+  padding: 0px;
   height: auto;
 }
 
