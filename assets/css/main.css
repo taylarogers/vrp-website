@@ -2036,11 +2036,11 @@ section,
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .resource-item {
       flex-direction: column;
       align-items: flex-start;
-      gap: 15px;
+      gap: 2px;
   }
 
   .btn-view {
@@ -2059,44 +2059,109 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Title Section
+--------------------------------------------------------------*/
+.title-section {
+  border-bottom: 2px solid color-mix(in srgb, var(--nav-color), transparent 90%);
+}
+
+.title-container {
+  width: 100%; 
+  text-align: center;
+  padding-left: 250px; 
+  padding-right: 250px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .title-container {
+    padding-left: 20px; 
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Footer Section
 --------------------------------------------------------------*/
-/* Updated for proper alignment */
-.right-aligned {
-  text-align: right;
+.footer p{
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  position: relative;
 }
 
 .container.footer-top {
-  display: flex; /* Change grid to flexbox */
-  justify-content: space-between; /* Ensure even spacing between columns */
-  width: 100%; /* Ensure full width */
-  align-items: flex-start; /* Align columns to start */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
 }
 
-.footer-about {
-  width: 45%; /* Ensure each column takes up around half of the width */
+.footer-column {
+  width: 30%; /* Adjust this value as needed */
 }
 
-.right-aligned .footer-contact {
-  margin-left: auto; /* Push the right-aligned content to the far right */
+.footer-left {
+  text-align: left;
 }
 
-.right-aligned .d-flex {
-  justify-content: flex-end; /* Align the university name to the right */
+.footer-center {
+  text-align: center;
 }
 
-@media (max-width: 768px) {
+.footer-right {
+  text-align: right;
+}
+
+.footer-contact p {
+  margin-bottom: 5px;
+}
+
+.sub-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.center-justified {
+  justify-content: center!important;
+}
+
+.right-justified {
+  justify-content: flex-end!important;
+}
+
+
+@media (max-width: 900px) {
   .container.footer-top {
-    flex-direction: column; /* Stack columns on smaller screens */
+    flex-direction: column;
     align-items: flex-start;
   }
 
-  .footer-about {
-    width: 100%; /* Make sure columns take full width on small screens */
+  .footer-column {
+    width: 100%;
     margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .footer-center, .footer-right {
+    margin-top: 20px;
+  }
+
+  .footer-center .d-flex, .footer-right .d-flex {
+    justify-content: flex-start;
+  }
+
+  .center-justified {
+    justify-content: flex-start!important;
+  }
+  
+  .right-justified {
+    justify-content: flex-start!important;
   }
 }
-
 
 /*--------------------------------------------------------------
 # Blob Section
