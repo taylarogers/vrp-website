@@ -2289,6 +2289,28 @@ section,
   bottom: 0;
 }
 
+/* Override Bootstrap's button styles */
+.btn-secondary.dropdown-toggle {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: var(--contrast-color) !important;
+}
+
+.btn-secondary.dropdown-toggle:hover,
+.btn-secondary.dropdown-toggle:focus,
+.btn-secondary.dropdown-toggle.custom-active {
+  background-color: var(--accent-hover-colour) !important;
+  border-color: var(--accent-hover-colour) !important;
+  color: var(--contrast-color) !important;
+  box-shadow: none !important;
+}
+
+/* Remove focus outline */
+.btn-secondary.dropdown-toggle:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 @media (max-width: 900px) {
   .algorithm-grid {
       grid-template-columns: 1fr;

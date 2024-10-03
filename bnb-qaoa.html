@@ -424,7 +424,6 @@
     const dropdown = document.querySelector('.dropdown');
     const dropdownMenu = document.querySelector('.dropdown-menu');
 
-    // Initialize the dropdown manually without using Bootstrap's JavaScript
     let isDropdownOpen = false;
 
     function toggleDropdown() {
@@ -432,13 +431,14 @@
         if (isDropdownOpen) {
             dropdown.classList.add('show');
             dropdownMenu.classList.add('show');
+            dropdownButton.classList.add('custom-active');
         } else {
             dropdown.classList.remove('show');
             dropdownMenu.classList.remove('show');
+            dropdownButton.classList.remove('custom-active');
         }
     }
 
-    // Function to handle dropdown item selection
     function handleDropdownSelection(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -452,18 +452,20 @@
                 // Close dropdown
                 toggleDropdown();
                 closeAllSubmenus();
+
+                // Remove focus from the button and reset its style
+                dropdownButton.blur();
+                resetButtonStyle();
             }
         }
     }
 
-    // Function to close all submenus
     function closeAllSubmenus() {
         document.querySelectorAll('.dropdown-submenu .dropdown-menu').forEach(menu => {
             menu.style.display = 'none';
         });
     }
 
-    // Function to open submenu
     function openSubmenu(submenu, e) {
         e.preventDefault();
         e.stopPropagation();
@@ -474,7 +476,12 @@
         }
     }
 
-    // Handle nested dropdowns
+    // New function to reset button style
+    function resetButtonStyle() {
+        dropdownButton.style.backgroundColor = '';
+        dropdownButton.style.color = '';
+    }
+
     const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
     dropdownSubmenus.forEach(function(dropdownSubmenu) {
         dropdownSubmenu.addEventListener('mouseenter', function(e) {
@@ -495,18 +502,16 @@
         });
     });
 
-    // Add click event listener to the entire dropdown menu
     dropdownMenu.addEventListener('click', handleDropdownSelection);
 
-    // Close dropdown when clicking outside
     document.addEventListener('click', function(e) {
         if (isDropdownOpen && !dropdown.contains(e.target)) {
             toggleDropdown();
             closeAllSubmenus();
+            resetButtonStyle();
         }
     });
 
-    // Handle main dropdown button click
     dropdownButton.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -542,7 +547,6 @@
         return `${customers} customer${customers === '1' ? '' : 's'}, ${vehicles.replace('v', '')} vehicle${vehicles === '1v' ? '' : 's'}`;
     }
 
-    // Set default problem size
     updateImages('2c1v');
 });
     </script>
