@@ -338,221 +338,6 @@
     </div>
 </section><!-- End Route Constructions Section -->
 
-    <!-- Quantum Section -->
-    <section id="quantum" class="section services glass-background blob">
-            <!-- Section Title -->
-            <div class="container section-title no-bottom-padding" data-aos="fade-up">
-            <h2>Why Quantum Computing?</h2>
-            <p>There is interest in the ability of quantum principles, namely entanglement and superposition, in solving complex combinatorial optimisation problems such as the VRP. IBM’s Noisy Intermediate-Scale Quantum (NISQ) devices can use these principles to explore multiple routes concurrently. Hybrid quantum-classical methods are the current most practical implementation of quantum algorithms due to issues faced by the NISQ devices such as noise, errors and limited qubit counts.</p>
-            </div><!-- End Section Title -->
-        </div>
-
-    </section><!-- /Quantum Section -->
-
-    <!-- Dataset + Performance Metrics Section -->
-    <section id="dataset-performance-metrics" class="section about no-bottom-margin no-bottom-padding">
-        <div class="container">
-            <div class="row gy-3">
-                <div class="col-lg-6 d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
-                    <div class="about-content ps-0 ps-lg-3">
-                        <h2>Dataset</h2>
-                        <p>
-                            A customer dataset was created due to the scarcity of publicly available datasets. This includes both symmetric and asymmetric data inputs to evaluate algorithm versatility across multiple routing challenges.
-                        </p>
-                        <p>  
-                            The number of vehicles and destinations remains relatively small to stay within the practical limits of the QAOA and B&B algorithms. This includes problem sizes from 2 customers and 1 vehicle to 15 customers and 8 vehicles.
-                        </p>
-                        <div class="dataset-diagram">
-                            <p>
-                                CUSTOMERS : 2
-                            </p>
-                            <p>
-                                VEHICLES : 1
-                            </p>
-                            <p>
-                                0 136 337 
-                            </p>
-                            <p>
-                                364 0 496 
-                            </p>
-                            <p>
-                                5 335 0 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 d-flex flex-column performance-metrics" data-aos="fade-up" data-aos-delay="200">
-                    <div class="about-content ps-0 ps-lg-3">
-                        <h2 class="performance-metrics-heading">Performance Metrics</h2>
-                        <ul>
-                            <li><p><b>Solution quality</b>: the total cost of the optimal route identified</p></li>
-                            <li><p><b>CPU time</b>: duration each algorithm takes to solve</p></li>
-                            <li><p><b>Scalability</b>: maximum problem size able to be solved</p></li>
-                            <li><p><b>Feasibility</b>: proportion of problem instances that meet all problem constraints</p></li>
-                            <li><p><b>Success rate</b>: how often solutions within certain thresholds of the best solution are produced</p></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Dataset + Performance Metrics Section -->
-
-    <!-- Experimental Settings + Implementation -->
-    <section id="experimental-settings-implementation" class="section about no-bottom-margin no-bottom-padding">
-        <div class="container">
-            <div class="row gy-3">
-                <div class="col-lg-9 d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
-                    <div class="about-content ps-0 ps-lg-3">
-                        <h2>Experimental Settings</h2>
-                        <p>
-                            All experiments conducted on a classical computer, with the use of a quantum simulator to mimick the performance of quantum algorithms without needing access to a quantum computer. Specifications of computer can be found in the table below.
-                        </p>
-                        <p>  
-                            Each algorithm run 6 times per data input with a 6 hour timeout to manage computational time.
-                        </p>
-                        <table class="specs-table">
-                            <tr class="heading">
-                                <th>Specification</th>
-                                <th>Details</th>
-                            </tr>
-                            <tr>
-                                <td>Operating System</td>
-                                <td>Linux Server</td>
-                            </tr>
-                            <tr>
-                                <td>Processor</td>
-                                <td>AMD Ryzen 7 3800X 8-Core Processor</td>
-                            </tr>
-                            <tr>
-                                <td>Threads</td>
-                                <td>16</td>
-                            </tr>
-                            <tr>
-                                <td>Memory (RAM)</td>
-                                <td>32 GB</td>
-                            </tr>
-                            <tr>
-                                <td>GPU</td>
-                                <td>NVIDIA GeForce RTX 2060</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-flex flex-column performance-metrics" data-aos="fade-up" data-aos-delay="200">
-                    <div class="about-content ps-0 ps-lg-3">
-                        <h2>Implementation</h2>
-                        <p>
-                            All algorithms were implemented using Python, with the use of IBM’s Algorithms and Optimisation packages throughout the quantum implementations.
-                        </p>
-                        <p>
-                            The code repository is available for transparency and reproducibility.
-                        </p>
-
-                        <a class="btn-repo" href="">Github Repo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Experimental Settings + Implementation -->
-
-    <!-- Algorithm Comparisons Section -->
-    <section id="algorithm-comparisons" class="section about">
-        <div class="container">
-            <div class="row gy-3 align-items-start">
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="about-content ps-0 ps-lg-3">
-                        <h2>Algorithm Comparisons</h2>
-                        <p>
-                            The results of the comparative analysis of classical and quantum methods.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                    <div class="algo-cards-wrapper">
-                        <div class="algo-cards">
-                            <div class="algo-card card-1">
-                                <p>Branch and Bound vs Quantum Approximate Optimisation Algorithm</p>
-                                <a class="btn-repo" href="">View</a>
-                            </div>
-                            <div class="algo-card card-2">
-                                <p>Simulated Annealing vs Variational Quantum Eigensolver</p>
-                                <a class="btn-repo" href="">View</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Algorithm Comparisons Section -->
-
-    <!-- Resources Section -->
-<section id="resources" class="section services glass-background blob">
-    <!-- Section Title -->
-    <div class="container section-title resource-title" data-aos="fade-up">
-        <h2>Resources</h2>
-    </div><!-- End Section Title -->
-    
-    <!-- Resources List -->
-    <div class="container" data-aos="fade-up">
-        <div class="resources-list">
-            <div class="resource-item">
-                <div class="resource-info">
-                    <h3><b>Literature Review</b> - SA vs VQE</h3>
-                </div>
-                <div class="resource-actions">
-                    <span class="author-name">Ben Cleveland</span>
-                    <a href="#" class="btn-view">View</a>
-                </div>
-            </div>
-            <div class="resource-item">
-                <div class="resource-info">
-                    <h3><b>Literature Review</b> - B&B vs QAOA</h3>
-                </div>
-                <div class="resource-actions">
-                    <span class="author-name">Tayla Rogers</span>
-                    <a href="#" class="btn-view">View</a>
-                </div>
-            </div>
-            <div class="resource-item">
-                <div class="resource-info">
-                    <h3><b>Research Proposal</b></h3>
-                </div>
-                <div class="resource-actions">
-                    <span class="author-name">Ben Cleveland, Tayla Rogers</span>
-                    <a href="#" class="btn-view">View</a>
-                </div>
-            </div>
-            <div class="resource-item">
-                <div class="resource-info">
-                    <h3><b>Final Paper</b> - SA vs VQE</h3>
-                </div>
-                <div class="resource-actions">
-                    <span class="author-name">Ben Cleveland</span>
-                    <a href="#" class="btn-view">View</a>
-                </div>
-            </div>
-            <div class="resource-item">
-                <div class="resource-info">
-                    <h3><b>Final Paper</b> - B&B vs QAOA</h3>
-                </div>
-                <div class="resource-actions">
-                    <span class="author-name">Tayla Rogers</span>
-                    <a href="#" class="btn-view">View</a>
-                </div>
-            </div>
-            <div class="resource-item">
-                <div class="resource-info">
-                    <h3><b>Research Poster</b></h3>
-                </div>
-                <div class="resource-actions">
-                    <span class="author-name">Ben Cleveland, Tayla Rogers</span>
-                    <a href="#" class="btn-view">View</a>
-                </div>
-            </div>
-        </div>
-    </div><!-- End Resources List -->
-</section><!-- End Resources Section -->
-
   </main>
 
   <footer id="footer" class="footer position-relative">
@@ -636,41 +421,96 @@
     document.addEventListener('DOMContentLoaded', function() {
     const dropdownButton = document.getElementById('dropdownMenuButton');
     const algorithmSections = document.querySelectorAll('.algorithm-section');
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    // Initialize the dropdown manually without using Bootstrap's JavaScript
+    let isDropdownOpen = false;
+
+    function toggleDropdown() {
+        isDropdownOpen = !isDropdownOpen;
+        if (isDropdownOpen) {
+            dropdown.classList.add('show');
+            dropdownMenu.classList.add('show');
+        } else {
+            dropdown.classList.remove('show');
+            dropdownMenu.classList.remove('show');
+        }
+    }
 
     // Function to handle dropdown item selection
     function handleDropdownSelection(e) {
-        // Check if the clicked element is a dropdown item
-        if (e.target.classList.contains('dropdown-item') && !e.target.classList.contains('dropdown-toggle')) {
-            e.preventDefault(); // Prevent the default anchor behavior
-            e.stopPropagation(); // Stop the event from bubbling up
+        e.preventDefault();
+        e.stopPropagation();
 
+        if (e.target.classList.contains('dropdown-item') && !e.target.classList.contains('dropdown-toggle')) {
             const problemSize = e.target.getAttribute('data-problem-size');
             if (problemSize) {
                 updateImages(problemSize);
                 dropdownButton.textContent = e.target.textContent;
+                
+                // Close dropdown
+                toggleDropdown();
+                closeAllSubmenus();
             }
         }
     }
 
-    // Add click event listener to the entire dropdown menu
-    document.querySelector('.dropdown-menu').addEventListener('click', handleDropdownSelection);
+    // Function to close all submenus
+    function closeAllSubmenus() {
+        document.querySelectorAll('.dropdown-submenu .dropdown-menu').forEach(menu => {
+            menu.style.display = 'none';
+        });
+    }
+
+    // Function to open submenu
+    function openSubmenu(submenu, e) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeAllSubmenus();
+        const menu = submenu.querySelector('.dropdown-menu');
+        if (menu) {
+            menu.style.display = 'block';
+        }
+    }
 
     // Handle nested dropdowns
-    var dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+    const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
     dropdownSubmenus.forEach(function(dropdownSubmenu) {
         dropdownSubmenu.addEventListener('mouseenter', function(e) {
-            var nextEl = this.querySelector('.dropdown-menu');
-            if (nextEl && window.innerWidth > 991) {
-                nextEl.style.display = 'block';
+            openSubmenu(this, e);
+        });
+
+        dropdownSubmenu.addEventListener('click', function(e) {
+            if (e.target === this.querySelector('a')) {
+                openSubmenu(this, e);
             }
         });
 
         dropdownSubmenu.addEventListener('mouseleave', function() {
-            var nextEl = this.querySelector('.dropdown-menu');
-            if (nextEl && window.innerWidth > 991) {
-                nextEl.style.display = 'none';
+            const menu = this.querySelector('.dropdown-menu');
+            if (menu && window.innerWidth > 991) {
+                menu.style.display = 'none';
             }
         });
+    });
+
+    // Add click event listener to the entire dropdown menu
+    dropdownMenu.addEventListener('click', handleDropdownSelection);
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (isDropdownOpen && !dropdown.contains(e.target)) {
+            toggleDropdown();
+            closeAllSubmenus();
+        }
+    });
+
+    // Handle main dropdown button click
+    dropdownButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleDropdown();
     });
 
     function updateImages(problemSize) {
