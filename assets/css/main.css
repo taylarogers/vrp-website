@@ -2216,13 +2216,77 @@ section,
 
 .route-diagram {
   max-width: 320px;
-  padding: 5px;
+  padding: 15px;
   height: auto;
 }
 
 .smaller-heading {
   text-align: left;
   margin-bottom: 10px;
+}
+
+/* Updated Nested Dropdown Styles */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a:after {
+  display: inline-block;
+  content: "\25B6"; /* Unicode for black right-pointing triangle */
+  margin-left: 5px;
+  font-size: 0.7em;
+  vertical-align: middle;
+  text-decoration: none;
+  border: none;
+}
+
+.dropdown-submenu:hover > a:after {
+  color: var(--accent-color);
+}
+
+.dropdown-item {
+  color: var(--default-color);
+  transition: 0.3s;
+  background-color: transparent;
+  border: none;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: transparent;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-item.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Adjust dropdown direction for last two submenus */
+.dropdown-submenu:nth-last-child(-n+3) > .dropdown-menu {
+  top: auto;
+  bottom: 0;
 }
 
 @media (max-width: 900px) {
