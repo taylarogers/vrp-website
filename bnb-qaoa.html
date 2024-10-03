@@ -194,12 +194,12 @@
                 <div class="research-questions-title">
                     <h2>Route Constructions</h2>
                     <p class="subtitle">Routes constructed by each algorithm on each individual problem size</p>
-                    <p class="subtitle">Different colours show different vehicle routes, with a grey dashed line showing unused connections between customers</p>
+                    <p class="subtitle">Different colours show the routes for different vehicles - on larger number of vehicles, there are some duplicate colours</p>
                     <div class="dropdown mt-3">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                             2 customers, 1 vehicle
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <ul class="dropdown-menu dropdown-menu-force-down" aria-labelledby="dropdownMenuButton">
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle" href="#">2 customers</a>
                                 <ul class="dropdown-menu">
@@ -339,16 +339,23 @@
                     <p>Due to its deterministic nature, B&B produced globally optimal results across all the problem sizes that it was able to solve.</p>
                     <p>Both QAOA variants performed well on smaller problem sizes, but as problem size increased their solution quality decreased. The SPSA optimiser generally offered routes closer to the optimal cost, however not significantly better than COBLYA. Neither optimiser allowed QAOA to be as effective as B&B. Both optimisers also produced an invalid solution in one problem size, choosing a solution with a lower optimal cost that did not follow the constraints of the problem. These invalid solutions can be seen on the above graph, where the QAOA algorithms obtained an optimal cost below that of B&B.</p>
                     <div class="bb-diagram-container">
-                        <div class="blob glass-background bb-diagram">
-                            <img src="assets/img/BB-diagram.svg" alt="Example Branch and Bound Tree" class="img-fluid">
+                        <div class="blob bb-diagram extra-padding-everywhere">
+                            <img src="assets/img/BB-QAOA-Optimal-Costs.png" alt="Graph of Algorithms' Optimal Cost" class="img-fluid">
                         </div>
                     </div>
                     <h3 class="smaller-heading slight-upper-padding">CPU Time</h3>
                     <p>Considering the instances that were able to be solved, B&B maintained low computational time against most problem sizes. Negligible CPU time was observed for smaller instances, with a steady upward trend in times as problem size increased. B&B also showed consistent performance across most problem sizes, with its standard deviation only noticeably increasing as the problem size approached 10 customers.</p>
                     <p>QAOA produced significantly higher CPU times with the SPSA optimiser showing the sharpest increase in times. Even for smaller instances, SPSA required twice the amount of time than COBLYA. However, even COBLYA falls short of B&B’s performance. Both QAOA variants also showed a much higher variability in time compared to B&B. Despite the relatively higher standard deviation, it still remains small in comparison to the algorithm’s total computation time and do not noticeably affect the algorithm’s performance.</p>
-                    <div class="bb-diagram-container">
-                        <div class="blob glass-background bb-diagram">
-                            <img src="assets/img/QAOA-diagram.svg" alt="Example Branch and Bound Tree" class="img-fluid">
+                    <div class="bb-diagram-row">
+                        <div class="bb-diagram-container">
+                            <div class="blob bb-diagram extra-padding-everywhere">
+                                <img src="assets/img/BB-QAOA-Time.png" alt="Graph of Algorithms' Time" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="bb-diagram-container">
+                            <div class="blob bb-diagram extra-padding-everywhere">
+                                <img src="assets/img/BB-QAOA-Std-Time.png" alt="Graph of Algorithms' Standard Deviation of Time" class="img-fluid">
+                            </div>
                         </div>
                     </div>
                     <h3 class="smaller-heading slight-upper-padding">Scalability</h3>
@@ -358,6 +365,11 @@
                     <p>In the solvable instances, B&B consistently produced valid answers that follow all problem constraints. Both QAOA variants only produced feasible answers on 83.33% of instances, with both algorithms producing an invalid solution on one problem instance. These results occurred on a different problem size for each algorithm, implying different sensitivities to problem complexity between the optimisers. With its direct relationship, an increase in the algorithm’s p-value should raise this feasibility percentage, however it will also increase the computational time necessary.</p>
                     <h3 class="smaller-heading slight-upper-padding">Success Rate</h3>
                     <p>The SPSA optimiser allowed QAOA a higher success rate on both 95% and 99% thresholds. However, it was still not able to match the accuracy of B&B. On the 99% thresholds, both optimisers produced lower success rates, highlighting the challenges faced by QAOA in obtaining highly accurate solutions. </p>
+                    <div class="bb-diagram-container">
+                        <div class="blob bb-diagram extra-padding-everywhere">
+                            <img src="assets/img/BB-QAOA-Success-Rate.png" alt="Graph of Algorithms' Success Rates" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
