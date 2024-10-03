@@ -59,22 +59,14 @@
               <li><a href="index.html#resources">Resources</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="bnb-qaoa.html" class="active"><span>B&B vs QAOA</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="bnb-qaoa.html"><span>B&B vs QAOA</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="bnb-qaoa.html#vrp">Research Questions</a></li>
-              <li><a href="bnb-qaoa.html#vrp">Algorithms</a></li>
-              <li><a href="bnb-qaoa.html#vrp">Algorithmic Implementations</a></li>
-              <li><a href="bnb-qaoa.html#vrp">Route Constructions</a></li>
-              <li class="dropdown"><a href="bnb-qaoa.html#vrp"><span>Results</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="bnb-qaoa.html#vrp">Solution Quality</a></li>
-                  <li><a href="bnb-qaoa.html#vrp">CPU Time</a></li>
-                  <li><a href="bnb-qaoa.html#vrp">Scalability</a></li>
-                  <li><a href="bnb-qaoa.html#vrp">Feasibility</a></li>
-                  <li><a href="bnb-qaoa.html#vrp">Success Rate</a></li>
-                </ul>
-              </li>
-              <li><a href="bnb-qaoa.html#vrp">Conclusions</a></li>
+              <li><a href="bnb-qaoa.html#research-questions">Research Questions</a></li>
+              <li><a href="bnb-qaoa.html#algorithms">Algorithms</a></li>
+              <li><a href="bnb-qaoa.html#algorithmic-implementation">Algorithmic Implementations</a></li>
+              <li><a href="bnb-qaoa.html#route-constructions">Route Constructions</a></li>
+              <li><a href="bnb-qaoa.html#results">Results</a></li>
+              <li><a href="bnb-qaoa.html#conclusions">Conclusions</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="index.html#vrp"><span>SA vs VQE</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -83,15 +75,7 @@
               <li><a href="index.html#vrp">Algorithms</a></li>
               <li><a href="index.html#vrp">Algorithmic Implementations</a></li>
               <li><a href="index.html#vrp">Route Constructions</a></li>
-              <li class="dropdown"><a href="index.html#vrp"><span>Results</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="index.html#vrp">Solution Quality</a></li>
-                  <li><a href="index.html#vrp">CPU Time</a></li>
-                  <li><a href="index.html#vrp">Scalability</a></li>
-                  <li><a href="index.html#vrp">Feasibility</a></li>
-                  <li><a href="index.html#vrp">Success Rate</a></li>
-                </ul>
-              </li>
+              <li><a href="index.html#vrp">Results</a></li>
               <li><a href="index.html#vrp">Conclusions</a></li>
             </ul>
           </li>
@@ -381,7 +365,7 @@
     </section><!-- Results Section -->
 
     <!-- Conclusions Section -->
-    <section id="results" class="section about research-questions-section">
+    <section id="conclusions" class="section about research-questions-section">
         <div class="container">
         <div class="row align-items-start">
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
@@ -392,9 +376,9 @@
             </div>
             <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
                 <div class="research-questions-content">
-                    <h3 class="smaller-heading">1. How does the Quantum Approximate Optimisation Algorithm (QAOA) perform compared to Branch and Bound (B&B) regarding solution quality, computational time, scalability, feasibility and success rate across various VRP problem sizes?</h3>
+                    <h3 class="smaller-heading">1. How does QAOA perform compared to B&B regarding solution quality, computational time, scalability, feasibility and success rate across various VRP problem sizes?</h3>
                     <p>B&B outperforms QAOA in solution quality, computational efficiency, scalability, feasibility, and success rate, especially as problem size increases. Competitiveness has been shown by QAOA on smaller problems, but a significant decline in performance has been observed with increased complexity. This indicates that further development is needed for QAOA to match classical methods in solving the VRP.</p>
-                    <h3 class="smaller-heading">2. Can enhancements in QAOA’s optimiser (e.g.,COBYLA vs. SPSA) lead to performance improvements?</h3>
+                    <h3 class="smaller-heading">2. Can enhancements in QAOA’s optimiser lead to performance improvements?</h3>
                     <p>Noticeable differences between the optimisers only emerge for instances larger than 3 customers and 2 vehicles. SPSA generally yielded solutions closer to the optimal cost, while COBYLA demonstrated lower computational times. However, neither optimiser matched B&B’s performance as problem size grew. This suggests that optimiser choice alone has is not enough to bridge the gap with classical methods.</p>
                     <h3 class="smaller-heading">3. What are the limitations of QAOA in solving VRP instances compared to B&B?</h3>
                     <p>QAOA’s main limitations, compared to B&B, are highlighted by its lower feasibility percentage and reduced scalability. Current quantum limitations, such as qubit count, circuit depth, and noise levels, have forced constraints on QAOA, restricting its ability to solve larger problems effectively. A significant increase in computational time has also been observed with problem size, making QAOA less practical for larger, more complex VRP instances.</p>
