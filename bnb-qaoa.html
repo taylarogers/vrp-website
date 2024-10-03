@@ -106,7 +106,7 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
+    <!-- Title Section -->
     <section id="title" class="section colour-background title-section">
 
         <div class="title-container">
@@ -114,29 +114,64 @@
             <p class="pt-2 m-0">Tayla Rogers</p>
         </div>  
 
-    </section><!-- /Hero Section -->
+    </section><!-- End Title Section -->
 
-    <!-- VRP Section -->
-    <section id="vrp" class="section about">
+    <!-- Research Questions Section -->
+    <section id="research-questions" class="section about research-questions-section extra-top-padding">
         <div class="container">
-            <div class="row gy-3">
-                <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="about-content ps-0 ps-lg-3">
-                        <h2>What is the Vehicle Routing Problem?</h2>
-                        <p>
-                            The primary objective of the Vehicle Routing Problem (VRP) is to find the most cost-effective routes for a fleet of vehicles to deliver goods/services to a set of customers from a central depot. The vehicle must start and end at depot, as it would in a real-life scenario. The diagrams alongside show the different possible routes that a single vehicle could take to visit 2 customers. The VRP aims to determine which route the vehicle should take.
-                        </p>
+        <div class="row align-items-start">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="research-questions-title">
+                <h2>Research Questions</h2>
+                <p class="subtitle">Points for the study to identify</p>
+            </div>
+            </div>
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <div class="research-questions-content">
+                <ol class="research-questions-list">
+                <li>How does the Quantum Approximate Optimisation Algorithm (QAOA) perform compared to Branch and Bound (B&B) regarding solution quality, computational time, scalability, feasibility and success rate across various VRP problem sizes?</li>
+                <li>Can enhancements in QAOA's optimiser (e.g.,COBYLA vs. SPSA) lead to performance improvements?</li>
+                <li>What are the limitations of QAOA in solving VRP instances compared to B&B?</li>
+                </ol>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section><!-- End Research Questions Section -->
+
+    <!-- Algorithms Section -->
+    <section id="algorithms" class="section about research-questions-section">
+        <div class="container">
+        <div class="row align-items-start">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="research-questions-title">
+                <h2>Algorithms</h2>
+                <p class="subtitle">Brief explanations of both algorithms used in this study</p>
+            </div>
+            </div>
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="research-questions-content">
+                    <h3 class="smaller-heading">Branch and Bound</h3>
+                    <p>B&B is an exact algorithm by nature, guaranteeing the discovery of the optimal solution given enough time and computational resources. It explores potential solutions in a structured tree-like manner as seen in the diagram below.</p>
+                    <p>A branching strategy divides the problem into sub-problems represented by nodes in the tree. These sub-problems consist of deciding which customer to visit next in the current route. Bounding techniques eliminate the exploration for non-promising routes to improve performance. Selection rules are used to determine which sub-problem to explore next. The algorithm runs until all sub-problems have been explored or it reaches a timeout.</p>
+                    <div class="bb-diagram-container">
+                        <div class="blob glass-background bb-diagram">
+                            <img src="assets/img/BB-diagram.svg" alt="Example Branch and Bound Tree" class="img-fluid">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-                    <div class="vrp-diagrams">
-                        <img src="assets/img/vrp-diagram-1.svg" alt="VRP Diagram 1" class="img-fluid vrp-diagram diagram-1">
-                        <img src="assets/img/vrp-diagram-2.svg" alt="VRP Diagram 2" class="img-fluid vrp-diagram diagram-2">
+                    <h3 class="smaller-heading slight-upper-padding">Quantum Approximate Optimisation  Algorithm</h3>
+                    <p>Quantum Approximate Optimisation Algorithm (QAOA) is a hybrid quantum-classical algorithm, one of the most popular quantum approaches to solving combinatorial optimisation problems. The flow of how QAOA works can be seen in the diagram below.</p>
+                    <p>The Mixer (H<sub>M</sub>) and Cost Hamiltonians (H<sub>C</sub>) are used together to balance exploration of the solution space and exploitation of problem information to drive the algorithm towards more optimal solutions. Penalty terms are added to H<sub>C</sub> to enforce problem constraints. The ansatz, a parameterised quantum circuit, is applied with the use of H<sub>M</sub> and H<sub>C</sub> to evolve the quantum state within the algorithm. The number of layers of the quantum circuit (<i>p</i>) balances the quality of the approximation with the complexity of the circuit. Parameters are fine-tuned by a classical optimiser to balance H<sub>M</sub> and H<sub>C</sub>.</p>
+                    <div class="bb-diagram-container">
+                        <div class="blob glass-background bb-diagram">
+                            <img src="assets/img/QAOA-diagram.svg" alt="Example Branch and Bound Tree" class="img-fluid">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!-- /VRP Section -->
+        </div>
+    </section><!-- End Algorithms Section -->
 
     <!-- Quantum Section -->
     <section id="quantum" class="section services glass-background blob">
