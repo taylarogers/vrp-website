@@ -2108,7 +2108,7 @@ section,
 
 .research-questions-title .subtitle {
   font-size: 16px;
-  color: #6c757d;
+  color: var(--heading-color);
 }
 
 .research-questions-content {
@@ -2137,6 +2137,10 @@ section,
 
 .bb-diagram {
   max-width: 400px;
+}
+
+.list-color {
+  color: var(--heading-color);
 }
 
 @media (max-width: 991px) {

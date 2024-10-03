@@ -128,7 +128,7 @@
             </div>
             <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
             <div class="research-questions-content">
-                <ol class="research-questions-list">
+                <ol class="research-questions-list list-color">
                 <li>How does the Quantum Approximate Optimisation Algorithm (QAOA) perform compared to Branch and Bound (B&B) regarding solution quality, computational time, scalability, feasibility and success rate across various VRP problem sizes?</li>
                 <li>Can enhancements in QAOA's optimiser (e.g.,COBYLA vs. SPSA) lead to performance improvements?</li>
                 <li>What are the limitations of QAOA in solving VRP instances compared to B&B?</li>
@@ -159,7 +159,7 @@
                             <img src="assets/img/BB-diagram.svg" alt="Example Branch and Bound Tree" class="img-fluid">
                         </div>
                     </div>
-                    <h3 class="smaller-heading slight-upper-padding">Quantum Approximate Optimisation  Algorithm</h3>
+                    <h3 class="smaller-heading slight-upper-padding">Quantum Approximate Optimisation Algorithm</h3>
                     <p>Quantum Approximate Optimisation Algorithm (QAOA) is a hybrid quantum-classical algorithm, one of the most popular quantum approaches to solving combinatorial optimisation problems. The flow of how QAOA works can be seen in the diagram below.</p>
                     <p>The Mixer (H<sub>M</sub>) and Cost Hamiltonians (H<sub>C</sub>) are used together to balance exploration of the solution space and exploitation of problem information to drive the algorithm towards more optimal solutions. Penalty terms are added to H<sub>C</sub> to enforce problem constraints. The ansatz, a parameterised quantum circuit, is applied with the use of H<sub>M</sub> and H<sub>C</sub> to evolve the quantum state within the algorithm. The number of layers of the quantum circuit (<i>p</i>) balances the quality of the approximation with the complexity of the circuit. Parameters are fine-tuned by a classical optimiser to balance H<sub>M</sub> and H<sub>C</sub>.</p>
                     <div class="bb-diagram-container">
@@ -172,6 +172,37 @@
         </div>
         </div>
     </section><!-- End Algorithms Section -->
+
+    <!-- Algorithmic Implementation Section -->
+    <section id="algorithmic-implementation" class="section about research-questions-section">
+        <div class="container">
+        <div class="row align-items-start">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="research-questions-title">
+                <h2>Algorithmic Implementation</h2>
+                <p class="subtitle">Implementation choices made in the construction of each algorithm</p>
+            </div>
+            </div>
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="research-questions-content">
+                    <h3 class="smaller-heading">Branch and Bound</h3>
+                    <ul class="list-color">
+                        <li><b>Branching strategy:</b> generate all possible customer assignments to vehicles from the customers yet to be visited on the sub-route being looked at</li>
+                        <li><b>Pruning method:</b> upper-bound pruning used to eliminate partial solutions that exceed the best known cost at the time</li>
+                        <li><b>Selection rule:</b> Best-First Search (BFS) strategy used to prioritise sub-routes with the lowest current route cost</li>
+                    </ul>
+                    <h3 class="smaller-heading slight-upper-padding">Quantum Approximate Optimisation Algorithm</h3>
+                    <ul class="list-color">
+                        <li><b><i>p</i>-value:</b> value of 5 was selected to balance the speed and quality of results obtained to allow for a fair comparison across multiple metrics</li>
+                        <li><b>Classical optimisers:</b> both COBLYA and SPSA optimisers were used in implementation, as they have been found to produce the most accurate results when paired with QAOA </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section><!-- Algorithmic Implementation Section -->
+
+    
 
     <!-- Quantum Section -->
     <section id="quantum" class="section services glass-background blob">
