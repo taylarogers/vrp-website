@@ -2,615 +2,817 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>VRP</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>VRP</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
-  <!-- Favicons -->
-  <link href="assets/img/quantum.jpeg" rel="icon"> <!-- TRUCK.PNG OR QUANTUM.JPEG-->
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="assets/img/quantum.jpeg" rel="icon"> <!-- TRUCK.PNG OR QUANTUM.JPEG-->
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
+    <!-- =======================================================
   * Template Name: Ninestars
   * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
   * Updated: Aug 07 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+    <!-- 
+    <style>
+        .algorithm-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        .algorithm-grid-four {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* New class for 4 columns */
+            gap: 20px;
+            /* Space between items */
+            width: 100%;
+            align-items: start;
+            /* Aligns items to the top */
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .algorithm-grid-four {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 columns on small screens */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .algorithm-grid-four {
+                grid-template-columns: repeat(3, 1fr);
+                /* 3 columns on medium screens */
+            }
+        }
+    </style> -->
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">VRP</h1>
-      </a>
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename">VRP</h1>
+            </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li class="dropdown"><a href="index.html"><span>Home</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="index.html#vrp">What is the VRP?</a></li>
-              <li><a href="index.html#quantum">Why Quantum Computing?</a></li>
-              <li><a href="index.html#dataset-performance-metrics">Dataset and Performance Metrics</a></li>
-              <li><a href="index.html#experimental-settings-implementation">Experimental Settings and Implementation</a></li>
-              <li><a href="index.html#algorithm-comparisons">Algorithm Comparisons</a></li>
-              <li><a href="index.html#resources">Resources</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="bnb-qaoa.html"><span>B&B vs QAOA</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="bnb-qaoa.html#research-questions">Research Questions</a></li>
-              <li><a href="bnb-qaoa.html#algorithms">Algorithms</a></li>
-              <li><a href="bnb-qaoa.html#algorithmic-implementation">Algorithmic Implementations</a></li>
-              <li><a href="bnb-qaoa.html#route-constructions">Route Constructions</a></li>
-              <li><a href="bnb-qaoa.html#results">Results</a></li>
-              <li><a href="bnb-qaoa.html#conclusions">Conclusions</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="sa-vqe.html" class="active"><span>SA vs VQE</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="sa-vqe.html#research-questions">Research Questions</a></li>
-              <li><a href="sa-vqe.html#algorithms">Algorithms</a></li>
-              <li><a href="sa-vqe.html#algorithmic-implementation">Algorithmic Implementations</a></li>
-              <li><a href="sa-vqe.html#route-constructions">Route Constructions</a></li>
-              <li><a href="sa-vqe.html#results">Results</a></li>
-              <li><a href="sa-vqe.html#conclusions">Conclusions</a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="sa-vqe.html#footer">Team</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Title Section -->
-    <section id="title" class="section colour-background title-section">
-
-        <div class="title-container">
-            <h1>Branch and Bound vs Quantum Approximate Optimisation Algorithm</h1>
-            <p class="pt-2 m-0">Tayla Rogers</p>
-        </div>  
-
-    </section><!-- End Title Section -->
-
-    <!-- Research Questions Section -->
-    <section id="research-questions" class="section about research-questions-section extra-top-padding">
-        <div class="container">
-        <div class="row align-items-start">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="research-questions-title">
-                <h2>Research Questions</h2>
-                <p class="subtitle">Points for the study to identify</p>
-            </div>
-            </div>
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <div class="research-questions-content">
-                <ol class="research-questions-list list-color">
-                <li>How does the Quantum Approximate Optimisation Algorithm (QAOA) perform compared to Branch and Bound (B&B) regarding solution quality, computational time, scalability, feasibility and success rate across various VRP problem sizes?</li>
-                <li>Can enhancements in QAOA's optimiser (e.g.,COBYLA vs. SPSA) lead to performance improvements?</li>
-                <li>What are the limitations of QAOA in solving VRP instances compared to B&B?</li>
-                </ol>
-            </div>
-            </div>
-        </div>
-        </div>
-    </section><!-- End Research Questions Section -->
-
-    <!-- Algorithms Section -->
-    <section id="algorithms" class="section about research-questions-section">
-        <div class="container">
-        <div class="row align-items-start">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="research-questions-title">
-                <h2>Algorithms</h2>
-                <p class="subtitle">Brief explanations of both algorithms used in this study</p>
-            </div>
-            </div>
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                <div class="research-questions-content">
-                    <h3 class="smaller-heading">Branch and Bound</h3>
-                    <p>B&B is an exact algorithm by nature, guaranteeing the discovery of the optimal solution given enough time and computational resources. It explores potential solutions in a structured tree-like manner as seen in the diagram below.</p>
-                    <p>A branching strategy divides the problem into sub-problems represented by nodes in the tree. These sub-problems consist of deciding which customer to visit next in the current route. Bounding techniques eliminate the exploration for non-promising routes to improve performance. Selection rules are used to determine which sub-problem to explore next. The algorithm runs until all sub-problems have been explored or it reaches a timeout.</p>
-                    <div class="bb-diagram-container">
-                        <div class="blob glass-background bb-diagram">
-                            <img src="assets/img/BB-diagram.svg" alt="Example Branch and Bound Tree" class="img-fluid">
-                        </div>
-                    </div>
-                    <h3 class="smaller-heading slight-upper-padding">Quantum Approximate Optimisation Algorithm</h3>
-                    <p>Quantum Approximate Optimisation Algorithm (QAOA) is a hybrid quantum-classical algorithm, one of the most popular quantum approaches to solving combinatorial optimisation problems. The flow of how QAOA works can be seen in the diagram below.</p>
-                    <p>The Mixer (H<sub>M</sub>) and Cost Hamiltonians (H<sub>C</sub>) are used together to balance exploration of the solution space and exploitation of problem information to drive the algorithm towards more optimal solutions. Penalty terms are added to H<sub>C</sub> to enforce problem constraints. The ansatz, a parameterised quantum circuit, is applied with the use of H<sub>M</sub> and H<sub>C</sub> to evolve the quantum state within the algorithm. The number of layers of the quantum circuit (<i>p</i>) balances the quality of the approximation with the complexity of the circuit. Parameters are fine-tuned by a classical optimiser to balance H<sub>M</sub> and H<sub>C</sub>.</p>
-                    <div class="bb-diagram-container">
-                        <div class="blob glass-background bb-diagram">
-                            <img src="assets/img/QAOA-diagram.svg" alt="Example Branch and Bound Tree" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section><!-- End Algorithms Section -->
-
-    <!-- Algorithmic Implementation Section -->
-    <section id="algorithmic-implementation" class="section about research-questions-section">
-        <div class="container">
-        <div class="row align-items-start">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="research-questions-title">
-                <h2>Algorithmic Implementation</h2>
-                <p class="subtitle">Implementation choices made in the construction of each algorithm</p>
-            </div>
-            </div>
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                <div class="research-questions-content">
-                    <h3 class="smaller-heading">Branch and Bound</h3>
-                    <ul class="list-color">
-                        <li><b>Branching strategy:</b> generate all possible customer assignments to vehicles from the customers yet to be visited on the sub-route being looked at</li>
-                        <li><b>Pruning method:</b> upper-bound pruning used to eliminate partial solutions that exceed the best known cost at the time</li>
-                        <li><b>Selection rule:</b> Best-First Search (BFS) strategy used to prioritise sub-routes with the lowest current route cost</li>
-                    </ul>
-                    <h3 class="smaller-heading slight-upper-padding">Quantum Approximate Optimisation Algorithm</h3>
-                    <ul class="list-color">
-                        <li><b><i>p</i>-value:</b> value of 5 was selected to balance the speed and quality of results obtained to allow for a fair comparison across multiple metrics</li>
-                        <li><b>Classical optimisers:</b> both COBLYA and SPSA optimisers were used in implementation, as they have been found to produce the most accurate results when paired with QAOA </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section><!-- Algorithmic Implementation Section -->
-
-    <!-- Route Constructions Section -->
-<section id="route-constructions" class="section about research-questions-section">
-    <div class="container">
-        <div class="row align-items-start">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="research-questions-title">
-                    <h2>Route Constructions</h2>
-                    <p class="subtitle">Routes constructed by each algorithm on each individual problem size</p>
-                    <p class="subtitle">Different colours show the routes for different vehicles - on larger number of vehicles, there are some duplicate colours</p>
-                    <div class="dropdown mt-3">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            2 customers, 1 vehicle
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-force-down" aria-labelledby="dropdownMenuButton">
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">2 customers</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" data-problem-size="2c1v">2 customers, 1 vehicle</a></li>
-                                </ul>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li class="dropdown"><a href="index.html"><span>Home</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="index.html#vrp">What is the VRP?</a></li>
+                            <li><a href="index.html#quantum">Why Quantum Computing?</a></li>
+                            <li><a href="index.html#dataset-performance-metrics">Dataset and Performance Metrics</a>
                             </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">3 customers</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" data-problem-size="3c1v">3 customers, 1 vehicle</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="3c2v">3 customers, 2 vehicles</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">4 customers</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" data-problem-size="4c1v">4 customers, 1 vehicle</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="4c2v">4 customers, 2 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="4c3v">4 customers, 3 vehicles</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">5 customers</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" data-problem-size="5c1v">5 customers, 1 vehicle</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="5c2v">5 customers, 2 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="5c3v">5 customers, 3 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="5c4v">5 customers, 4 vehicles</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">6 customers</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" data-problem-size="6c1v">6 customers, 1 vehicle</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="6c2v">6 customers, 2 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="6c3v">6 customers, 3 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="6c4v">6 customers, 4 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="6c5v">6 customers, 5 vehicles</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">7 customers</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" data-problem-size="7c4v">7 customers, 4 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="7c5v">7 customers, 5 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="7c6v">7 customers, 6 vehicles</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu upward-dropdown">
-                                <a class="dropdown-item dropdown-toggle" href="#">8 customers</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" data-problem-size="8c1v">8 customers, 1 vehicle</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="8c2v">8 customers, 2 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="8c3v">8 customers, 3 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="8c4v">8 customers, 4 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="8c5v">8 customers, 5 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="8c6v">8 customers, 6 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="8c7v">8 customers, 7 vehicles</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu upward-dropdown">
-                                <a class="dropdown-item dropdown-toggle" href="#">10 customers</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" data-problem-size="10c1v">10 customers, 1 vehicle</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="10c3v">10 customers, 3 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="10c4v">10 customers, 4 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="10c5v">10 customers, 5 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="10c6v">10 customers, 6 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="10c7v">10 customers, 7 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="10c8v">10 customers, 8 vehicles</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu upward-dropdown">
-                                <a class="dropdown-item dropdown-toggle" href="#">15 customers</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" data-problem-size="15c1v">15 customers, 1 vehicle</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="15c2v">15 customers, 2 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="15c3v">15 customers, 3 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="15c4v">15 customers, 4 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="15c5v">15 customers, 5 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="15c6v">15 customers, 6 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="15c7v">15 customers, 7 vehicles</a></li>
-                                    <li><a class="dropdown-item" href="#" data-problem-size="15c8v">15 customers, 8 vehicles</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="index.html#experimental-settings-implementation">Experimental Settings and
+                                    Implementation</a></li>
+                            <li><a href="index.html#algorithm-comparisons">Algorithm Comparisons</a></li>
+                            <li><a href="index.html#resources">Resources</a></li>
                         </ul>
+                    </li>
+                    <li class="dropdown"><a href="bnb-qaoa.html"><span>B&B vs QAOA</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="bnb-qaoa.html#research-questions">Research Questions</a></li>
+                            <li><a href="bnb-qaoa.html#algorithms">Algorithms</a></li>
+                            <li><a href="bnb-qaoa.html#algorithmic-implementation">Algorithmic Implementations</a></li>
+                            <li><a href="bnb-qaoa.html#route-constructions">Route Constructions</a></li>
+                            <li><a href="bnb-qaoa.html#results">Results</a></li>
+                            <li><a href="bnb-qaoa.html#conclusions">Conclusions</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="sa-vqe.html" class="active"><span>SA vs VQE</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="sa-vqe.html#research-questions">Research Questions</a></li>
+                            <li><a href="sa-vqe.html#algorithms">Algorithms</a></li>
+                            <li><a href="sa-vqe.html#algorithmic-implementation">Algorithmic Implementations</a></li>
+                            <li><a href="sa-vqe.html#route-constructions">Route Constructions</a></li>
+                            <li><a href="sa-vqe.html#results">Results</a></li>
+                            <li><a href="sa-vqe.html#conclusions">Conclusions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="sa-vqe.html#footer">Team</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Title Section -->
+        <section id="title" class="section colour-background title-section">
+
+            <div class="title-container">
+                <h1>Simulated Annealing vs Variational Quantum Eigensolver</h1>
+                <p class="pt-2 m-0">Ben Cleveland</p>
+            </div>
+
+        </section><!-- End Title Section -->
+
+        <!-- Research Questions Section -->
+        <section id="research-questions" class="section about research-questions-section extra-top-padding">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="research-questions-title">
+                            <h2>Research Questions</h2>
+                            <p class="subtitle">Points for the study to identify</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="research-questions-content">
+                            <ol class="research-questions-list list-color">
+                                <li>How do variational quantum methods perform in terms of solution quality and
+                                    computational time compared to metaheuristic methods across different problem
+                                    instance sizes of the VRP?</li>
+                                <li>Is there a quantum advantage over classical methods for solving the VRP, and if so,
+                                    under what conditions does this advantage manifest?</li>
+                                <li>For what range of problem instance sizes can the latest publicly available IBM
+                                    quantum Qiskit algorithms and simulators produce solutions that are within 95% and
+                                    99% of the globally optimal solution? </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                <div class="research-questions-content">
-                    <div id="algorithm-content" class="algorithm-grid">
-                        <div class="algorithm-section" id="bb-section">
-                            <h3 class="smaller-heading">B&B</h3>
-                            <div class="route-diagram-container">
-                                <div class="blob glass-background route-diagram">
-                                    <img src="assets/img/BB-diagram-2c1v.svg" alt="B&B Tree for 2 customers, 1 vehicle" class="img-fluid">
+        </section><!-- End Research Questions Section -->
+
+        <!-- Algorithms Section -->
+        <section id="algorithms" class="section about research-questions-section">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="research-questions-title">
+                            <h2>Algorithms</h2>
+                            <p class="subtitle">Brief explanations of both algorithms used in this study</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="research-questions-content">
+                            <h3 class="smaller-heading">Simulated Annealing</h3>
+                            <p>Simulated Annealing (SA) is a metaheuristic algorithm inspired by the physical process of
+                                annealing in metallurgy. SA starts with an initial solution and iteratively explores the
+                                solution space by evaluating neighboring solutions. If a neighboring solution improves
+                                the current solution, it is accepted. If not, it may still be accepted based on a
+                                probability that decreases over time, allowing the algorithm to escape local optima and
+                                potentially find a global optimum.</p>
+                            <p>The process is governed by a temperature parameter
+                                that decreases gradually, balancing exploration and exploitation. SA is widely used for
+                                solving combinatorial optimisation problems like the VRP due to its ability to find good
+                                solutions quickly across various problem sizes.
+                            </p>
+                            <div class="bb-diagram-container">
+                                <div class="blob glass-background bb-diagram">
+                                    <img src="assets/img/SA-diagram.png" alt="SA diagram" class="img-fluid">
+                                </div>
+                            </div>
+                            <h3 class="smaller-heading slight-upper-padding">Variational Quantum Eigensolver
+                            </h3>
+                            <p>The Variational Quantum Eigensolver (VQE) is a hybrid quantum-classical algorithm
+                                designed to find the minimum eigenvalue of a Hamiltonian matrix, which corresponds to
+                                the optimal solution of the problem.</p>
+                            <p>In VQE, a parameterized quantum circuit (ansatz) is
+                                prepared, and its parameters are iteratively adjusted by a classical optimiser to
+                                minimize the energy of the system. The quantum part calculates the energy for a given
+                                parameter set, while the classical optimiser updates the parameters based on this
+                                feedback. VQE has shown promise for solving combinatorial optimisation problems like the
+                                VRP but remains limited by current quantum hardware, such as the number of qubits and
+                                circuit depth.</p>
+                            <div class="bb-diagram-container">
+                                <div class="blob glass-background bb-diagram">
+                                    <img src="assets/img/VQE-diagram.JPG" alt="VQE diagram" class="img-fluid">
                                 </div>
                             </div>
                         </div>
-                        <div class="algorithm-section" id="qaoa-cobyla-section">
-                            <h3 class="smaller-heading">QAOA with COBYLA</h3>
-                            <div class="route-diagram-container">
-                                <div class="blob glass-background route-diagram">
-                                    <img src="assets/img/QAOA-COBYLA-diagram-2c1v.svg" alt="QAOA with COBLYA for 2 customers, 1 vehicle" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Algorithms Section -->
+
+        <!-- Algorithmic Implementation Section -->
+        <section id="algorithmic-implementation" class="section about research-questions-section">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="research-questions-title">
+                            <h2>Algorithmic Implementation</h2>
+                            <p class="subtitle">Implementation choices made in the construction of each algorithm</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="research-questions-content">
+                            <h3 class="smaller-heading">Simulated Annealing</h3>
+                            <ul class="list-color">
+                                <li><b> Initial Solution:</b> Generated using the savings algorithm, which produces more
+                                    effective solutions than random generation.</li>
+                                <li><b> Cooling Rate:</b> Set to 0.99 to allow gradual cooling and thorough exploration
+                                    of the solution space.</li>
+                                <li><b>Stopping Criteria:</b> Two variants tested — SA100 (100 stagnation limit) and
+                                    SA1000 (1000 stagnation limit).</li>
+                                <li><b> Objective Function:</b> Minimize total vehicle distance while adhering to VRP
+                                    constraints.</li>
+                                <li><b> Temperature & Iterations:</b> Initial temperature set to 100, with 100
+                                    iterations
+                                    per temperature level.</li>
+                            </ul>
+                            <h3 class="smaller-heading slight-upper-padding">Variational Quantum Eigensolver
+                            </h3>
+                            <ul class="list-color">
+                                <li><b><i> Ansatz:</b> Real Amplitudes ansatz chosen for its low circuit depth
+                                    and efficiency.
+                                </li>
+                                <li><b> Classical optimisers:</b> COBYLA (linear approximations) and SPSA (stochastic
+                                    gradient-based) were tested.</li>
+                                <li><b> Qiskit Implementation:</b> Used MinimumEigenOptimizer to convert VRP to an Ising
+                                    Hamiltonian, with SamplingVQE managing computational load.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Algorithmic Implementation Section -->
+
+        <!-- Route Constructions Section -->
+        <section id="route-constructions" class="section about research-questions-section">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="research-questions-title">
+                            <h2>Route Constructions</h2>
+                            <p class="subtitle">Routes constructed by each algorithm on each individual problem size</p>
+                            <p class="subtitle">Different colours show the routes for different vehicles - on larger
+                                number of vehicles, there are some duplicate colours</p>
+                            <div class="dropdown mt-3">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    2 customers, 1 vehicle
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-force-down" aria-labelledby="dropdownMenuButton">
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">2 customers</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-problem-size="2c1v">2 customers,
+                                                    1 vehicle</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">3 customers</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-problem-size="3c1v">3 customers,
+                                                    1 vehicle</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="3c2v">3 customers,
+                                                    2 vehicles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">4 customers</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-problem-size="4c1v">4 customers,
+                                                    1 vehicle</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="4c2v">4 customers,
+                                                    2 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="4c3v">4 customers,
+                                                    3 vehicles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">5 customers</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-problem-size="5c1v">5 customers,
+                                                    1 vehicle</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="5c2v">5 customers,
+                                                    2 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="5c3v">5 customers,
+                                                    3 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="5c4v">5 customers,
+                                                    4 vehicles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">6 customers</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-problem-size="6c1v">6 customers,
+                                                    1 vehicle</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="6c2v">6 customers,
+                                                    2 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="6c3v">6 customers,
+                                                    3 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="6c4v">6 customers,
+                                                    4 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="6c5v">6 customers,
+                                                    5 vehicles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">7 customers</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-problem-size="7c4v">7 customers,
+                                                    4 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="7c5v">7 customers,
+                                                    5 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="7c6v">7 customers,
+                                                    6 vehicles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu upward-dropdown">
+                                        <a class="dropdown-item dropdown-toggle" href="#">8 customers</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-problem-size="8c1v">8 customers,
+                                                    1 vehicle</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="8c2v">8 customers,
+                                                    2 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="8c3v">8 customers,
+                                                    3 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="8c4v">8 customers,
+                                                    4 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="8c5v">8 customers,
+                                                    5 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="8c6v">8 customers,
+                                                    6 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="8c7v">8 customers,
+                                                    7 vehicles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu upward-dropdown">
+                                        <a class="dropdown-item dropdown-toggle" href="#">10 customers</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-problem-size="10c1v">10
+                                                    customers, 1 vehicle</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="10c3v">10
+                                                    customers, 3 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="10c4v">10
+                                                    customers, 4 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="10c5v">10
+                                                    customers, 5 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="10c6v">10
+                                                    customers, 6 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="10c7v">10
+                                                    customers, 7 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="10c8v">10
+                                                    customers, 8 vehicles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu upward-dropdown">
+                                        <a class="dropdown-item dropdown-toggle" href="#">15 customers</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-problem-size="15c1v">15
+                                                    customers, 1 vehicle</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="15c2v">15
+                                                    customers, 2 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="15c3v">15
+                                                    customers, 3 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="15c4v">15
+                                                    customers, 4 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="15c5v">15
+                                                    customers, 5 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="15c6v">15
+                                                    customers, 6 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="15c7v">15
+                                                    customers, 7 vehicles</a></li>
+                                            <li><a class="dropdown-item" href="#" data-problem-size="15c8v">15
+                                                    customers, 8 vehicles</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="research-questions-content">
+                            <div id="algorithm-content" class="algorithm-grid">
+                                <div class="algorithm-section-bens" id="sa100-section">
+                                    <h3 class=" smaller-heading">SA 100</h3>
+                                    <div class="route-diagram-container">
+                                        <div class="blob glass-background route-diagram">
+                                            <img src="assets/img/SA-100-diagram-2c1v.svg"
+                                                alt="B&B Tree for 2 customers, 1 vehicle" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="algorithm-section-bens" id="sa1000-section"> <!-- New Section -->
+                                    <h3 class=" smaller-heading">SA 1000</h3>
+                                    <div class="route-diagram-container">
+                                        <div class="blob glass-background route-diagram">
+                                            <img src="assets/img/SA-1000-diagram-2c1v.svg"
+                                                alt="VQE with SPSA for 2 customers, 1 vehicle" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="algorithm-section-bens" id="vqe-spsa-section"> <!-- New Section -->
+                                    <h3 class="smaller-heading">VQE with SPSA</h3>
+                                    <div class="route-diagram-container">
+                                        <div class="blob glass-background route-diagram">
+                                            <img src="assets/img/VQE-SPSA-diagram-2c1v.svg"
+                                                alt="VQE with SPSA for 2 customers, 1 vehicle" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="algorithm-section-bens" id="vqe-cobyla-section"> <!-- New Section -->
+                                    <h3 class="smaller-heading">VQE with COBYLA</h3>
+                                    <div class="route-diagram-container">
+                                        <div class="blob glass-background route-diagram">
+                                            <img src="assets/img/VQE-COBYLA-diagram-2c1v.svg"
+                                                alt="VQE with COBYLA for 2 customers, 1 vehicle" class="img-fluid">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="algorithm-section" id="qaoa-spsa-section">
-                            <h3 class="smaller-heading">QAOA with SPSA</h3>
-                            <div class="route-diagram-container">
-                                <div class="blob glass-background route-diagram">
-                                    <img src="assets/img/QAOA-SPSA-diagram-2c1v.svg" alt="QAOA with SPSA for 2 customers, 1 vehicle" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Route Constructions Section -->>
+
+        <!-- Results Section -->
+        <section id="results" class="section about research-questions-section">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="research-questions-title">
+                            <h2>Results</h2>
+                            <p class="subtitle">Brief discussion on the experimental results obtained by each algorithm
+                                on the proposed performance metrics</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="research-questions-content">
+                            <h3 class="smaller-heading">Solution Quality</h3>
+                            <p>SA consistently produced high-quality solutions across all problem
+                                sizes, often reaching near-optimal solutions quickly. SA provided solutions within
+                                87%–97% of the global optimum, with no invalid results observed. Due to its heuristic
+                                and stochastic nature, the solutions that are found vary, but are consistently near
+                                optimal cost and
+                                are produced quickly.</p>
+                            <p>In contrast, VQE struggled as problem size increased. For smaller instances, VQE produced
+                                competitive solutions, particularly when using the SPSA optimiser, which performed
+                                slightly better than COBYLA. However, VQE's solution quality significantly degraded for
+                                larger problems, often failing to reach near-optimal solutions. Their scalability was
+                                limited, as touched on later. </p>
+                            <div class="bb-diagram-container">
+                                <div class="blob bb-diagram extra-padding-everywhere">
+                                    <img src="assets/img/SA-VQE-Optimal-Costs.png"
+                                        alt="Graph of Algorithms' Optimal Cost" class="img-fluid">
+                                </div>
+                            </div>
+                            <h3 class="smaller-heading slight-upper-padding">CPU Time</h3>
+                            <p>SA demonstrated consistently low computational times across all
+                                problem sizes, completing computation in under a second, even for larger instances. This
+                                efficiency makes SA particularly suitable for real-world applications where rapid
+                                results are crucial.</p>
+                            <p>On the other hand, VQE exhibited significantly higher CPU times, especially for larger
+                                problem instances. With the SPSA optimiser, VQE required notably more time than SA, with
+                                computational times ranging from 1 second for smaller instances to over 11,000 seconds
+                                for larger ones. The COBYLA optimiser performed even worse, frequently reaching the
+                                maximum allowed timeout of six hours on larger instances. The exponential increase in
+                                VQE’s CPU time after just the third instance highlights its scalability challenges
+                                compared to SA.</p>
+                            <div class="bb-diagram-row">
+                                <div class="bb-diagram-container">
+                                    <div class="blob bb-diagram extra-padding-everywhere">
+                                        <img src="assets/img/SA-VQE-Time.png" alt="Graph of Algorithms' Time"
+                                            class="img-fluid">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <h3 class="smaller-heading slight-upper-padding">Scalability</h3>
+                            <p>SA scaled efficiently across all problem sizes, reliably solving
+                                instances from 2 customers and 1 vehicle up to 15 customers and 8 vehicles. SA's
+                                performance remained stable even as the problem size increased, making it a robust
+                                choice for larger, more complex VRP instances.</p>
+                            <p>VQE, however, struggled significantly with scalability. While it could solve smaller
+                                instances effectively, its performance declined as the problem size grew. VQE with SPSA
+                                managed to solve up to 6 customer instances, but COBYLA reached its limit at 4
+                                customers. The primary scalability bottlenecks for VQE were the memory limits for
+                                instances with 5 customers, and the qubit limits for instances with 6 or more customers,
+                                which severely limited its ability to handle larger problem sizes.</p>
+                            <h3 class="smaller-heading slight-upper-padding">Feasibility</h3>
+                            <p>SA consistently produced 100% feasible solutions across all problem
+                                sizes, meaning that all generated solutions adhered to the constraints of the VRP,
+                                regardless of the complexity of the problem. In contrast, VQE with SPSA produced 1
+                                infeasible solution out of the 6 solutions it was able to provide. </p>
+                            <h3 class="smaller-heading slight-upper-padding">Success Rate</h3>
+                            <p>SA demonstrated high success rates, consistently achieving many solutions within 95% and
+                                99%
+                                of the global optimum across all problem sizes. Success rates ranged between 87% and
+                                97%, indicating that SA is highly reliable in generating near-optimal solutions, even
+                                for larger and more complex VRP instances. In contrast, the success rates of VQE were
+                                notably lower and more variable. For smaller problem sizes, VQE with SPSA performed
+                                relatively well, achieving success rates of 83% at both the 95% and 99% thresholds.
+                                However, as the problem size increased, VQE’s success rates diminished significantly,
+                                especially with the COBYLA optimiser, which only achieved 33% success within the same
+                                thresholds. The combination of quantum hardware limitations and optimiser performance
+                                led to a clear decline in success rates as problem complexity grew, highlighting VQE’s
+                                current limitations compared to SA.
+                            <div class="bb-diagram-container">
+                                <div class="blob bb-diagram extra-padding-everywhere">
+                                    <img src="assets/img/SA-VQE-Success-Rate.JPG"
+                                        alt="Graph of Algorithms' Success Rates" class="img-fluid" style="scale: 1.3;">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section><!-- End Route Constructions Section -->
+        </section><!-- Results Section -->
 
-    <!-- Results Section -->
-    <section id="results" class="section about research-questions-section">
-        <div class="container">
-        <div class="row align-items-start">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="research-questions-title">
-                <h2>Results</h2>
-                <p class="subtitle">Brief discussion on the experimental results obtained by each algorithm on the proposed performance metrics</p>
-            </div>
-            </div>
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                <div class="research-questions-content">
-                    <h3 class="smaller-heading">Solution Quality</h3>
-                    <p>Due to its deterministic nature, B&B produced globally optimal results across all the problem sizes that it was able to solve.</p>
-                    <p>Both QAOA variants performed well on smaller problem sizes, but as problem size increased their solution quality decreased. The SPSA optimiser generally offered routes closer to the optimal cost, however not significantly better than COBLYA. Neither optimiser allowed QAOA to be as effective as B&B. Both optimisers also produced an invalid solution in one problem size, choosing a solution with a lower optimal cost that did not follow the constraints of the problem. These invalid solutions can be seen on the above graph, where the QAOA algorithms obtained an optimal cost below that of B&B.</p>
-                    <div class="bb-diagram-container">
-                        <div class="blob bb-diagram extra-padding-everywhere">
-                            <img src="assets/img/BB-QAOA-Optimal-Costs.png" alt="Graph of Algorithms' Optimal Cost" class="img-fluid">
+        <!-- Conclusions Section -->
+        <section id="conclusions" class="section about research-questions-section">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="research-questions-title">
+                            <h2>Conclusions</h2>
+                            <p class="subtitle">Answers to the research questions that the insights of the study
+                                provided</p>
                         </div>
                     </div>
-                    <h3 class="smaller-heading slight-upper-padding">CPU Time</h3>
-                    <p>Considering the instances that were able to be solved, B&B maintained low computational time against most problem sizes. Negligible CPU time was observed for smaller instances, with a steady upward trend in times as problem size increased. B&B also showed consistent performance across most problem sizes, with its standard deviation only noticeably increasing as the problem size approached 10 customers.</p>
-                    <p>QAOA produced significantly higher CPU times with the SPSA optimiser showing the sharpest increase in times. Even for smaller instances, SPSA required twice the amount of time than COBLYA. However, even COBLYA falls short of B&B’s performance. Both QAOA variants also showed a much higher variability in time compared to B&B. Despite the relatively higher standard deviation, it still remains small in comparison to the algorithm’s total computation time and do not noticeably affect the algorithm’s performance.</p>
-                    <div class="bb-diagram-row">
-                        <div class="bb-diagram-container">
-                            <div class="blob bb-diagram extra-padding-everywhere">
-                                <img src="assets/img/BB-QAOA-Time.png" alt="Graph of Algorithms' Time" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="bb-diagram-container">
-                            <div class="blob bb-diagram extra-padding-everywhere">
-                                <img src="assets/img/BB-QAOA-Std-Time.png" alt="Graph of Algorithms' Standard Deviation of Time" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="smaller-heading slight-upper-padding">Scalability</h3>
-                    <p>From a dataset scaling up to 15 customers and 8 vehicles, B&B was able to solve up to a problem size of 15 customers and 1 vehicle given the available time and resource requirements. Its primary failure was it hitting 32GB memory limits on instances only involving 15 customers, highlighting its main weakness in its ability to solve real-world instances.</p>
-                    <p>Both QAOA variants were only able to solve up to 4 customers and 3 vehicles, with it also being affected by memory limits. Above 6 customers, the algorithm reaches qubit limits. This limit is likely due to the many constraints necessary in the problem definition. This shows QAOA’s main limitation in its ability to solve combinatorial optimisation problems.</p>
-                    <h3 class="smaller-heading slight-upper-padding">Feasibility</h3>
-                    <p>In the solvable instances, B&B consistently produced valid answers that follow all problem constraints. Both QAOA variants only produced feasible answers on 83.33% of instances, with both algorithms producing an invalid solution on one problem instance. These results occurred on a different problem size for each algorithm, implying different sensitivities to problem complexity between the optimisers. With its direct relationship, an increase in the algorithm’s p-value should raise this feasibility percentage, however it will also increase the computational time necessary.</p>
-                    <h3 class="smaller-heading slight-upper-padding">Success Rate</h3>
-                    <p>The SPSA optimiser allowed QAOA a higher success rate on both 95% and 99% thresholds. However, it was still not able to match the accuracy of B&B. On the 99% thresholds, both optimisers produced lower success rates, highlighting the challenges faced by QAOA in obtaining highly accurate solutions. </p>
-                    <div class="bb-diagram-container">
-                        <div class="blob bb-diagram extra-padding-everywhere">
-                            <img src="assets/img/BB-QAOA-Success-Rate.png" alt="Graph of Algorithms' Success Rates" class="img-fluid">
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="research-questions-content">
+                            <h3 class="smaller-heading">1. How do variational quantum methods perform in terms of
+                                solution quality and computational time compared to metaheuristic methods across
+                                different problem instance sizes of the VRP?</h3>
+                            <p>VQE methods performed significantly worse than SA in both solution quality and
+                                computational time. While VQE with SPSA achieved success rates of 83% within 95%–99% of
+                                the global optimum for smaller instances, VQE’s performance degraded sharply as problem
+                                sizes increased. In contrast, SA consistently produced near-optimal solutions across all
+                                instances with success rates ranging from 87% to 97%, completing in just 0.2 seconds for
+                                most cases. VQE’s computation times spiked from 1 to 3 seconds for smaller instances and
+                                up to over 11,000 seconds for larger ones, with COBYLA frequently hitting timeouts.
+                                Overall, SA significantly outperformed VQE in both solution quality and computational
+                                efficiency.</p>
+                            <h3 class="smaller-heading">2. Is there a quantum advantage over classical methods for
+                                solving the VRP, and if so, under what conditions does this advantage manifest?</h3>
+                            <p>No quantum advantage over classical methods, such as Simulated Annealing, was observed in
+                                this study. VQE struggled with scalability and failed to outperform SA in any meaningful
+                                way across various VRP instances. The limitations of current quantum simulators,
+                                including qubit count and computational overhead, prevented VQE from solving larger
+                                instances effectively. The results suggest that under present hardware and algorithmic
+                                constraints, quantum methods do not offer an advantage over classical metaheuristics for
+                                solving the VRP.</p>
+                            <h3 class="smaller-heading">3. For what range of problem instance sizes can the latest
+                                publicly available IBM quantum Qiskit algorithms and simulators produce solutions that
+                                are within 95% and 99% of the globally optimal solution?</h3>
+                            <p>VQE with the SPSA optimiser achieved success rates of 83% at both the 95% and 99%
+                                thresholds for problem instances with up to 4 customers. VQE with COBYLA, on the other
+                                hand, achieved only 33% success within the same thresholds for instances with up to 3
+                                customers. Beyond these sizes, success rates were not applicable due to inability to
+                                solve, indicating that current quantum algorithms struggle to maintain performance as
+                                problem complexity increases.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-    </section><!-- Results Section -->
+        </section><!-- Conclusions Section -->
 
-    <!-- Conclusions Section -->
-    <section id="conclusions" class="section about research-questions-section">
-        <div class="container">
-        <div class="row align-items-start">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="research-questions-title">
-                <h2>Conclusions</h2>
-                <p class="subtitle">Answers to the research questions that the insights of the study provided</p>
+    </main>
+
+    <footer id="footer" class="footer position-relative">
+        <div class="container footer-top">
+            <!-- Left-Aligned Details -->
+            <div class="footer-column footer-left">
+                <a href="index.html" class="d-flex align-items-center">
+                    <span class="sitename normal-text sub-heading">University of Cape Town</span>
+                </a>
+                <div class="footer-contact pt-1">
+                    <p>Department of Computer Science</p>
+                    <p class="mt-3"><strong>Phone:</strong> <span>(+27) 21 650 2663</span></p>
+                    <p><strong>Email:</strong> <span>dept@cs.uct.ac.za</span></p>
+                    <p><strong>Website:</strong> <span>www.cs.uct.ac.za</span></p>
+                </div>
             </div>
+
+            <!-- Center-Aligned Details -->
+            <div class="footer-column footer-center">
+                <a href="index.html" class="d-flex align-items-center center-justified">
+                    <span class="sitename normal-text sub-heading">Supervisor</span>
+                </a>
+                <div class="footer-contact pt-1">
+                    <p><i>Krupa Prag</i></p>
+                    <p><strong>Email:</strong> <span>krupa.prag@uct.ac.za</span></p>
+                </div>
             </div>
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                <div class="research-questions-content">
-                    <h3 class="smaller-heading">1. How does QAOA perform compared to B&B regarding solution quality, computational time, scalability, feasibility and success rate across various VRP problem sizes?</h3>
-                    <p>B&B outperforms QAOA in solution quality, computational efficiency, scalability, feasibility, and success rate, especially as problem size increases. Competitiveness has been shown by QAOA on smaller problems, but a significant decline in performance has been observed with increased complexity. This indicates that further development is needed for QAOA to match classical methods in solving the VRP.</p>
-                    <h3 class="smaller-heading">2. Can enhancements in QAOA’s optimiser lead to performance improvements?</h3>
-                    <p>Noticeable differences between the optimisers only emerge for instances larger than 3 customers and 2 vehicles. SPSA generally yielded solutions closer to the optimal cost, while COBYLA demonstrated lower computational times. However, neither optimiser matched B&B’s performance as problem size grew. This suggests that optimiser choice alone has is not enough to bridge the gap with classical methods.</p>
-                    <h3 class="smaller-heading">3. What are the limitations of QAOA in solving VRP instances compared to B&B?</h3>
-                    <p>QAOA’s main limitations, compared to B&B, are highlighted by its lower feasibility percentage and reduced scalability. Current quantum limitations, such as qubit count, circuit depth, and noise levels, have forced constraints on QAOA, restricting its ability to solve larger problems effectively. A significant increase in computational time has also been observed with problem size, making QAOA less practical for larger, more complex VRP instances.</p>
+
+            <!-- Right-Aligned Details -->
+            <div class="footer-column footer-right">
+                <a href="index.html" class="d-flex align-items-center right-justified">
+                    <span class="sitename normal-text sub-heading">Students</span>
+                </a>
+                <div class="footer-contact pt-1">
+                    <p><i>Ben Cleveland</i></p>
+                    <p><strong>Email:</strong> <span>BNJCLE001@myuct.ac.za</span></p>
+                    <p class="pt-1"><i>Tayla Rogers</i></p>
+                    <p><strong>Email:</strong> <span>RGRTAY001@myuct.ac.za</span></p>
                 </div>
             </div>
         </div>
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">University of Cape Town</strong> <span>All Rights
+                    Reserved</span></p>
+            <div class="credits">
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
         </div>
-    </section><!-- Conclusions Section -->
+    </footer>
 
-  </main>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
-  <footer id="footer" class="footer position-relative">
-    <div class="container footer-top">
-      <!-- Left-Aligned Details -->
-      <div class="footer-column footer-left">
-        <a href="index.html" class="d-flex align-items-center">
-          <span class="sitename normal-text sub-heading">University of Cape Town</span>
-        </a>
-        <div class="footer-contact pt-1">
-          <p>Department of Computer Science</p>
-          <p class="mt-3"><strong>Phone:</strong> <span>(+27) 21 650 2663</span></p>
-          <p><strong>Email:</strong> <span>dept@cs.uct.ac.za</span></p>
-          <p><strong>Website:</strong> <span>www.cs.uct.ac.za</span></p>
-        </div>
-      </div>
-      
-      <!-- Center-Aligned Details -->
-      <div class="footer-column footer-center">
-        <a href="index.html" class="d-flex align-items-center center-justified">
-          <span class="sitename normal-text sub-heading">Supervisor</span>
-        </a>
-        <div class="footer-contact pt-1">
-          <p><i>Krupa Prag</i></p>
-          <p><strong>Email:</strong> <span>krupa.prag@uct.ac.za</span></p>
-        </div>
-      </div>
-      
-      <!-- Right-Aligned Details -->
-      <div class="footer-column footer-right">
-        <a href="index.html" class="d-flex align-items-center right-justified">
-          <span class="sitename normal-text sub-heading">Students</span>
-        </a>
-        <div class="footer-contact pt-1">
-          <p><i>Ben Cleveland</i></p>
-          <p><strong>Email:</strong> <span>BNJCLE001@myuct.ac.za</span></p>
-          <p class="pt-1"><i>Tayla Rogers</i></p>
-          <p><strong>Email:</strong> <span>RGRTAY001@myuct.ac.za</span></p>
-        </div>
-      </div>
-    </div>
-  
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">University of Cape Town</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var homeLink = document.querySelector('.navmenu .dropdown > a[href="sa-vqe.html"]');
-      if (homeLink) {
-        homeLink.classList.add('active');
-        
-        window.addEventListener('scroll', function() {
-          homeLink.classList.add('active');
+        document.addEventListener('DOMContentLoaded', function () {
+            var homeLink = document.querySelector('.navmenu .dropdown > a[href="sa-vqe.html"]');
+            if (homeLink) {
+                homeLink.classList.add('active');
+
+                window.addEventListener('scroll', function () {
+                    homeLink.classList.add('active');
+                });
+            }
         });
-      }
-    });
 
-    document.addEventListener('DOMContentLoaded', function() {
-    const dropdownButton = document.getElementById('dropdownMenuButton');
-    const algorithmSections = document.querySelectorAll('.algorithm-section');
-    const dropdown = document.querySelector('.dropdown');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownButton = document.getElementById('dropdownMenuButton');
+            const algorithmSections = document.querySelectorAll('.algorithm-section-bens');
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
 
-    let isDropdownOpen = false;
+            let isDropdownOpen = false;
 
-    function toggleDropdown() {
-        isDropdownOpen = !isDropdownOpen;
-        if (isDropdownOpen) {
-            dropdown.classList.add('show');
-            dropdownMenu.classList.add('show');
-            dropdownButton.classList.add('custom-active');
-        } else {
-            dropdown.classList.remove('show');
-            dropdownMenu.classList.remove('show');
-            dropdownButton.classList.remove('custom-active');
-        }
-    }
+            function toggleDropdown() {
+                isDropdownOpen = !isDropdownOpen;
+                if (isDropdownOpen) {
+                    dropdown.classList.add('show');
+                    dropdownMenu.classList.add('show');
+                    dropdownButton.classList.add('custom-active');
+                } else {
+                    dropdown.classList.remove('show');
+                    dropdownMenu.classList.remove('show');
+                    dropdownButton.classList.remove('custom-active');
+                }
+            }
 
-    function handleDropdownSelection(e) {
-        e.preventDefault();
-        e.stopPropagation();
+            function handleDropdownSelection(e) {
+                e.preventDefault();
+                e.stopPropagation();
 
-        if (e.target.classList.contains('dropdown-item') && !e.target.classList.contains('dropdown-toggle')) {
-            const problemSize = e.target.getAttribute('data-problem-size');
-            if (problemSize) {
-                updateImages(problemSize);
-                dropdownButton.textContent = e.target.textContent;
-                
-                // Close dropdown
-                toggleDropdown();
+                if (e.target.classList.contains('dropdown-item') && !e.target.classList.contains('dropdown-toggle')) {
+                    const problemSize = e.target.getAttribute('data-problem-size');
+                    if (problemSize) {
+                        updateImages(problemSize);
+                        dropdownButton.textContent = e.target.textContent;
+
+                        // Close dropdown
+                        toggleDropdown();
+                        closeAllSubmenus();
+
+                        // Remove focus from the button and reset its style
+                        dropdownButton.blur();
+                        resetButtonStyle();
+                    }
+                }
+            }
+
+            function closeAllSubmenus() {
+                document.querySelectorAll('.dropdown-submenu .dropdown-menu').forEach(menu => {
+                    menu.style.display = 'none';
+                });
+            }
+
+            function openSubmenu(submenu, e) {
+                e.preventDefault();
+                e.stopPropagation();
                 closeAllSubmenus();
-
-                // Remove focus from the button and reset its style
-                dropdownButton.blur();
-                resetButtonStyle();
+                const menu = submenu.querySelector('.dropdown-menu');
+                if (menu) {
+                    menu.style.display = 'block';
+                }
             }
-        }
-    }
 
-    function closeAllSubmenus() {
-        document.querySelectorAll('.dropdown-submenu .dropdown-menu').forEach(menu => {
-            menu.style.display = 'none';
-        });
-    }
-
-    function openSubmenu(submenu, e) {
-        e.preventDefault();
-        e.stopPropagation();
-        closeAllSubmenus();
-        const menu = submenu.querySelector('.dropdown-menu');
-        if (menu) {
-            menu.style.display = 'block';
-        }
-    }
-
-    // New function to reset button style
-    function resetButtonStyle() {
-        dropdownButton.style.backgroundColor = '';
-        dropdownButton.style.color = '';
-    }
-
-    const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
-    dropdownSubmenus.forEach(function(dropdownSubmenu) {
-        dropdownSubmenu.addEventListener('mouseenter', function(e) {
-            openSubmenu(this, e);
-        });
-
-        dropdownSubmenu.addEventListener('click', function(e) {
-            if (e.target === this.querySelector('a')) {
-                openSubmenu(this, e);
+            // New function to reset button style
+            function resetButtonStyle() {
+                dropdownButton.style.backgroundColor = '';
+                dropdownButton.style.color = '';
             }
-        });
 
-        dropdownSubmenu.addEventListener('mouseleave', function() {
-            const menu = this.querySelector('.dropdown-menu');
-            if (menu && window.innerWidth > 991) {
-                menu.style.display = 'none';
+            const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+            dropdownSubmenus.forEach(function (dropdownSubmenu) {
+                dropdownSubmenu.addEventListener('mouseenter', function (e) {
+                    openSubmenu(this, e);
+                });
+
+                dropdownSubmenu.addEventListener('click', function (e) {
+                    if (e.target === this.querySelector('a')) {
+                        openSubmenu(this, e);
+                    }
+                });
+
+                dropdownSubmenu.addEventListener('mouseleave', function () {
+                    const menu = this.querySelector('.dropdown-menu');
+                    if (menu && window.innerWidth > 991) {
+                        menu.style.display = 'none';
+                    }
+                });
+            });
+
+            dropdownMenu.addEventListener('click', handleDropdownSelection);
+
+            document.addEventListener('click', function (e) {
+                if (isDropdownOpen && !dropdown.contains(e.target)) {
+                    toggleDropdown();
+                    closeAllSubmenus();
+                    resetButtonStyle();
+                }
+            });
+
+            dropdownButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleDropdown();
+            });
+
+            function updateImages(problemSize) {
+                algorithmSections.forEach(section => {
+                    const img = section.querySelector('img');
+                    const algorithm = getAlgorithmName(section.id);
+                    img.src = `assets/img/${algorithm}-diagram-${problemSize}.svg`;
+                    img.alt = `${algorithm} for ${getProblemSizeText(problemSize)}`;
+                    console.log(`Loading image: ${img.src}`); // For debugging
+                });
             }
+
+            function getAlgorithmName(sectionId) {
+                switch (sectionId) {
+                    case 'sa100-section':
+                        return 'SA-100';
+                    case 'sa1000-section':
+                        return 'SA-1000';
+                    case 'vqe-cobyla-section':
+                        return 'VQE-COBYLA';
+                    case 'vqe-spsa-section':
+                        return 'VQE-SPSA';
+                    default:
+                        console.error('Unknown algorithm section:', sectionId);
+                        return '';
+                }
+            }
+
+            function getProblemSizeText(problemSize) {
+                const [customers, vehicles] = problemSize.split('c');
+                return `${customers} customer${customers === '1' ? '' : 's'}, ${vehicles.replace('v', '')} vehicle${vehicles === '1v' ? '' : 's'}`;
+            }
+
+            updateImages('2c1v');
         });
-    });
-
-    dropdownMenu.addEventListener('click', handleDropdownSelection);
-
-    document.addEventListener('click', function(e) {
-        if (isDropdownOpen && !dropdown.contains(e.target)) {
-            toggleDropdown();
-            closeAllSubmenus();
-            resetButtonStyle();
-        }
-    });
-
-    dropdownButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        toggleDropdown();
-    });
-
-    function updateImages(problemSize) {
-        algorithmSections.forEach(section => {
-            const img = section.querySelector('img');
-            const algorithm = getAlgorithmName(section.id);
-            img.src = `assets/img/${algorithm}-diagram-${problemSize}.svg`;
-            img.alt = `${algorithm} for ${getProblemSizeText(problemSize)}`;
-            console.log(`Loading image: ${img.src}`); // For debugging
-        });
-    }
-
-    function getAlgorithmName(sectionId) {
-        switch(sectionId) {
-            case 'bb-section':
-                return 'BB';
-            case 'qaoa-coblya-section':
-                return 'QAOA-COBLYA';
-            case 'qaoa-spsa-section':
-                return 'QAOA-SPSA';
-            default:
-                console.error('Unknown algorithm section:', sectionId);
-                return '';
-        }
-    }
-
-    function getProblemSizeText(problemSize) {
-        const [customers, vehicles] = problemSize.split('c');
-        return `${customers} customer${customers === '1' ? '' : 's'}, ${vehicles.replace('v', '')} vehicle${vehicles === '1v' ? '' : 's'}`;
-    }
-
-    updateImages('2c1v');
-});
     </script>
 
 </body>

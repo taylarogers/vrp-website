@@ -12,30 +12,43 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Raleway",  sans-serif;
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Raleway", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #7a6960; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #AA61BD; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --accent-hover-colour: #77178f; /* Accent hover color for buttons and links */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #212529;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #7a6960;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #AA61BD;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-hover-colour: #77178f;
+  /* Accent hover color for buttons and links */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #212529;  /* The default color of the main navmenu links */
-  --nav-hover-color: #eb5d1e; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #eb5d1e; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #212529;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #eb5d1e;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #eb5d1e;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -54,11 +67,14 @@
 }
 
 .glass-background {
-  background: linear-gradient(to bottom right, 
-    rgba(144, 238, 144, 0.1), /* Light green with low opacity */
-    rgba(255, 255, 255, 0.5), /* White with medium opacity */
-    rgba(255, 243, 106, 0.1)  /* Light blue with low opacity */
-  );
+  background: linear-gradient(to bottom right,
+      rgba(144, 238, 144, 0.1),
+      /* Light green with low opacity */
+      rgba(255, 255, 255, 0.5),
+      /* White with medium opacity */
+      rgba(255, 243, 106, 0.1)
+      /* Light blue with low opacity */
+    );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -195,7 +211,8 @@ h6 {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-  color: #ffffff; /* White text */
+  color: #ffffff;
+  /* White text */
   background: var(--accent-color);
   font-size: 14px;
   padding: 8px 45px;
@@ -206,7 +223,8 @@ h6 {
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: #ffffff; /* White text */
+  color: #ffffff;
+  /* White text */
   background: var(--accent-hover-colour);
 }
 
@@ -838,12 +856,14 @@ section,
 
 .hero-img-container {
   display: flex;
-  justify-content: flex-start; /* Aligns content to the start (left) of the container */
+  justify-content: flex-start;
+  /* Aligns content to the start (left) of the container */
   align-items: center;
 }
 
 .hero-img img {
-  max-width: 80%; /* Adjust this value to make the image smaller or larger */
+  max-width: 80%;
+  /* Adjust this value to make the image smaller or larger */
   height: auto;
   margin-left: 70px;
 }
@@ -884,12 +904,15 @@ section,
 
 @media (max-width: 991px) {
   .hero-img-container {
-    padding-left: 0; /* Remove padding on smaller screens */
-    justify-content: center; /* Center the image on smaller screens */
+    padding-left: 0;
+    /* Remove padding on smaller screens */
+    justify-content: center;
+    /* Center the image on smaller screens */
   }
 
   .hero-img img {
-    max-width: 100%; /* Full width on smaller screens */
+    max-width: 100%;
+    /* Full width on smaller screens */
     margin-left: 0;
   }
 }
@@ -1008,7 +1031,8 @@ section,
   position: relative;
   height: 300px;
   margin-top: 20px;
-  width: 100%;  /* Ensure full width */
+  width: 100%;
+  /* Ensure full width */
 }
 
 .vrp-diagram {
@@ -1024,13 +1048,15 @@ section,
 
 .vrp-diagram.diagram-1 {
   top: 0;
-  left: 17%;  /* Adjusted from 10% to 20% */
+  left: 17%;
+  /* Adjusted from 10% to 20% */
   z-index: 2;
 }
 
 .vrp-diagram.diagram-2 {
   bottom: 0;
-  right: 17%;  /* Adjusted from 10% to 20% */
+  right: 17%;
+  /* Adjusted from 10% to 20% */
   z-index: 1;
 }
 
@@ -1686,6 +1712,7 @@ section,
   margin-bottom: 20px;
   left: 25%;
 }
+
 .dataset-diagram:hover {
   transform: translateY(-5px);
 }
@@ -1814,7 +1841,8 @@ section,
   overflow: hidden;
 }
 
-.specs-table th, .specs-table td {
+.specs-table th,
+.specs-table td {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #e0e0e0;
@@ -1850,11 +1878,12 @@ section,
 
 @media (max-width: 600px) {
   .specs-table {
-      font-size: 14px;
+    font-size: 14px;
   }
-  
-  .specs-table th, .specs-table td {
-      padding: 8px 10px;
+
+  .specs-table th,
+  .specs-table td {
+    padding: 8px 10px;
   }
 }
 
@@ -1884,7 +1913,8 @@ section,
 .algo-cards {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center cards horizontally */
+  align-items: center;
+  /* Center cards horizontally */
   width: 100%;
   max-width: 800px;
 }
@@ -1901,7 +1931,8 @@ section,
   background-color: white;
   text-align: center;
   margin-bottom: 15px;
-  width: 100%; /* Full width on mobile */
+  width: 100%;
+  /* Full width on mobile */
   max-width: 300px;
 }
 
@@ -2011,7 +2042,8 @@ section,
 .resource-actions {
   display: flex;
   align-items: center;
-  gap: 20px; /* Adjust the spacing between the name and the button */
+  gap: 20px;
+  /* Adjust the spacing between the name and the button */
 }
 
 .author-name {
@@ -2038,13 +2070,13 @@ section,
 
 @media (max-width: 900px) {
   .resource-item {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 2px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
   }
 
   .btn-view {
-      align-self: flex-start;
+    align-self: flex-start;
   }
 
   .resource-actions {
@@ -2054,7 +2086,7 @@ section,
   }
 
   .author-name {
-      text-align: left;
+    text-align: left;
   }
 }
 
@@ -2066,9 +2098,9 @@ section,
 }
 
 .title-container {
-  width: 100%; 
+  width: 100%;
   text-align: center;
-  padding-left: 250px; 
+  padding-left: 250px;
   padding-right: 250px;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -2076,7 +2108,7 @@ section,
 
 @media (max-width: 900px) {
   .title-container {
-    padding-left: 20px; 
+    padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 0px;
@@ -2119,7 +2151,8 @@ section,
 .research-questions-list {
   list-style-type: decimal;
   padding-left: 20px;
-  margin-top: 0;  /* Ensure the list starts at the top */
+  margin-top: 0;
+  /* Ensure the list starts at the top */
 }
 
 .research-questions-list li {
@@ -2168,7 +2201,8 @@ section,
   }
 
   .research-questions-title {
-    text-align: left;  /* Align left on mobile for consistency */
+    text-align: left;
+    /* Align left on mobile for consistency */
   }
 
   .research-questions-list {
@@ -2181,12 +2215,12 @@ section,
   }
 
   .bb-diagram-row .bb-diagram-container {
-      flex: 1 1 100%;
-      max-width: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
- /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # Route Constructions Section
 --------------------------------------------------------------*/
 .dropdown-toggle {
@@ -2228,6 +2262,13 @@ section,
   width: 100%;
 }
 
+.algorithm-section-bens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .algorithm-section {
   display: flex;
   flex-direction: column;
@@ -2237,8 +2278,10 @@ section,
 
 .algorithm-section:last-child {
   grid-column: 1 / -1;
-  width: calc(50% - 10px); /* Half the width of the container minus half the gap */
-  margin: 0 auto; /* Center the last section */
+  width: calc(50% - 10px);
+  /* Half the width of the container minus half the gap */
+  margin: 0 auto;
+  /* Center the last section */
 }
 
 .route-diagram-container {
@@ -2262,7 +2305,7 @@ section,
   position: relative;
 }
 
-.dropdown-submenu > .dropdown-menu {
+.dropdown-submenu>.dropdown-menu {
   top: 0;
   left: 100%;
   margin-top: -6px;
@@ -2270,13 +2313,14 @@ section,
   border-radius: 0 6px 6px 6px;
 }
 
-.dropdown-submenu:hover > .dropdown-menu {
+.dropdown-submenu:hover>.dropdown-menu {
   display: block;
 }
 
-.dropdown-submenu > a:after {
+.dropdown-submenu>a:after {
   display: inline-block;
-  content: "\25B6"; /* Unicode for black right-pointing triangle */
+  content: "\25B6";
+  /* Unicode for black right-pointing triangle */
   margin-left: 5px;
   font-size: 0.7em;
   vertical-align: middle;
@@ -2284,7 +2328,7 @@ section,
   border: none;
 }
 
-.dropdown-submenu:hover > a:after {
+.dropdown-submenu:hover>a:after {
   color: var(--accent-color);
 }
 
@@ -2324,7 +2368,7 @@ section,
 }
 
 /* Adjust dropdown direction for last two submenus */
-.dropdown-submenu:nth-last-child(-n+3) > .dropdown-menu {
+.dropdown-submenu:nth-last-child(-n+3)>.dropdown-menu {
   top: auto;
   bottom: 0;
 }
@@ -2365,23 +2409,23 @@ section,
     height: auto;
   }
 
-  .dropdown-submenu > .dropdown-menu {
+  .dropdown-submenu>.dropdown-menu {
     position: static;
     width: 100%;
     margin-top: 0;
     border: none;
     box-shadow: none;
-}
+  }
 
-.dropdown-submenu > a:after {
+  .dropdown-submenu>a:after {
     transform: rotate(90deg);
-}
+  }
 }
 
 /*--------------------------------------------------------------
 # Footer Section
 --------------------------------------------------------------*/
-.footer p{
+.footer p {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
@@ -2396,7 +2440,8 @@ section,
 }
 
 .footer-column {
-  width: 30%; /* Adjust this value as needed */
+  width: 30%;
+  /* Adjust this value as needed */
 }
 
 .footer-left {
@@ -2421,11 +2466,11 @@ section,
 }
 
 .center-justified {
-  justify-content: center!important;
+  justify-content: center !important;
 }
 
 .right-justified {
-  justify-content: flex-end!important;
+  justify-content: flex-end !important;
 }
 
 .slight-upper-padding {
@@ -2445,20 +2490,22 @@ section,
     text-align: left;
   }
 
-  .footer-center, .footer-right {
+  .footer-center,
+  .footer-right {
     margin-top: 20px;
   }
 
-  .footer-center .d-flex, .footer-right .d-flex {
+  .footer-center .d-flex,
+  .footer-right .d-flex {
     justify-content: flex-start;
   }
 
   .center-justified {
-    justify-content: flex-start!important;
+    justify-content: flex-start !important;
   }
-  
+
   .right-justified {
-    justify-content: flex-start!important;
+    justify-content: flex-start !important;
   }
 }
 
