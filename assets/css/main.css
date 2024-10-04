@@ -2373,6 +2373,10 @@ section,
   bottom: 0;
 }
 
+.route-diagram {
+  padding-bottom: 10px;
+}
+
 /* Override Bootstrap's button styles */
 .btn-secondary.dropdown-toggle {
   background-color: var(--accent-color) !important;
@@ -2407,6 +2411,7 @@ section,
   .route-diagram {
     max-width: 100%;
     height: auto;
+    padding-bottom: 10px;
   }
 
   .dropdown-submenu>.dropdown-menu {
@@ -2477,6 +2482,10 @@ section,
   padding-top: 20px;
 }
 
+.extra-top-bottom-padding {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
 @media (max-width: 900px) {
   .container.footer-top {
